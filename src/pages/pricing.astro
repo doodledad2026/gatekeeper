@@ -1,0 +1,687 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+---
+
+<BaseLayout title="Pricing — Expert Edge" description="Transparent pricing for expert verification. Choose the plan that fits your needs.">
+  <SiteHeader />
+
+  <main>
+    <!-- Pricing Hero Section -->
+    <section class="pricing-hero">
+      <div class="container">
+        <div class="section-header">
+          <h1>Simple, Transparent Pricing</h1>
+          <p>Choose the plan that fits your verification needs. Pay only for what you use.</p>
+        </div>
+
+        <div class="toggle-container">
+          <span class="toggle-label">Monthly</span>
+          <button class="toggle-switch" id="billingToggle" aria-label="Toggle between monthly and annual billing">
+            <span class="toggle-slider"></span>
+          </button>
+          <span class="toggle-label">Annual <span class="savings-badge">Save 20%</span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Cards Section -->
+    <section class="pricing-section">
+      <div class="container">
+        <div class="pricing-grid">
+          <!-- Starter Plan -->
+          <div class="pricing-card">
+            <div class="plan-header">
+              <h3>Starter</h3>
+              <p class="plan-description">For occasional verification</p>
+            </div>
+
+            <div class="pricing-display">
+              <span class="currency">$</span>
+              <span class="amount" data-monthly="29" data-annual="278">29</span>
+              <span class="period">/month</span>
+            </div>
+
+            <div class="billing-note" style="font-size: 0.9rem; color: #606060; margin-bottom: 1.5rem;">
+              <span class="monthly-note">Billed monthly</span>
+              <span class="annual-note" style="display: none;">Billed annually ($278/year)</span>
+            </div>
+
+            <button class="btn btn-outline btn-block">Get Started</button>
+
+            <div class="divider"></div>
+
+            <ul class="feature-list">
+              <li>✓ 5 expert searches per month</li>
+              <li>✓ Basic verification data</li>
+              <li>✓ Risk score assessment</li>
+              <li>✓ 30-day data retention</li>
+              <li>✗ API access</li>
+              <li>✗ Priority support</li>
+            </ul>
+          </div>
+
+          <!-- Professional Plan -->
+          <div class="pricing-card featured">
+            <div class="plan-badge">MOST POPULAR</div>
+
+            <div class="plan-header">
+              <h3>Professional</h3>
+              <p class="plan-description">For active legal teams</p>
+            </div>
+
+            <div class="pricing-display">
+              <span class="currency">$</span>
+              <span class="amount" data-monthly="99" data-annual="950">99</span>
+              <span class="period">/month</span>
+            </div>
+
+            <div class="billing-note" style="font-size: 0.9rem; color: #606060; margin-bottom: 1.5rem;">
+              <span class="monthly-note">Billed monthly</span>
+              <span class="annual-note" style="display: none;">Billed annually ($950/year)</span>
+            </div>
+
+            <button class="btn btn-primary btn-block">Get Started</button>
+
+            <div class="divider"></div>
+
+            <ul class="feature-list">
+              <li>✓ 50 expert searches per month</li>
+              <li>✓ Complete verification dossier</li>
+              <li>✓ Funding & conflict detection</li>
+              <li>✓ Publication history analysis</li>
+              <li>✓ 1-year data retention</li>
+              <li>✓ Email support (24h response)</li>
+              <li>✗ API access</li>
+            </ul>
+          </div>
+
+          <!-- Enterprise Plan -->
+          <div class="pricing-card">
+            <div class="plan-header">
+              <h3>Enterprise</h3>
+              <p class="plan-description">For organizations</p>
+            </div>
+
+            <div class="pricing-display">
+              <span class="custom-pricing">Custom</span>
+            </div>
+
+            <div class="billing-note" style="font-size: 0.9rem; color: #606060; margin-bottom: 1.5rem;">
+              Billed annually
+            </div>
+
+            <button class="btn btn-outline btn-block">Contact Sales</button>
+
+            <div class="divider"></div>
+
+            <ul class="feature-list">
+              <li>✓ Unlimited searches</li>
+              <li>✓ Full dossier + unlimited history</li>
+              <li>✓ REST API access</li>
+              <li>✓ Batch verification</li>
+              <li>✓ Custom integrations</li>
+              <li>✓ Dedicated account manager</li>
+              <li>✓ Priority phone support</li>
+              <li>✓ Custom compliance reports</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h4>Can I change plans anytime?</h4>
+            <p>Yes. Upgrade or downgrade your plan at any time. Changes take effect on your next billing cycle. If you upgrade mid-month, you'll be charged a prorated amount.</p>
+          </div>
+
+          <div class="faq-item">
+            <h4>Do you offer refunds?</h4>
+            <p>We offer a 14-day money-back guarantee if you're not satisfied. After that, you can cancel anytime with no penalties.</p>
+          </div>
+
+          <div class="faq-item">
+            <h4>What's included in a "search"?</h4>
+            <p>Each search queries all 8 public registries for a single expert, returns a comprehensive dossier with all available data, and includes a calculated risk score.</p>
+          </div>
+
+          <div class="faq-item">
+            <h4>How does annual billing save 20%?</h4>
+            <p>Annual plans receive a 20% discount compared to paying month-to-month. This reflects our reduced processing costs and your commitment to Expert Edge.</p>
+          </div>
+
+          <div class="faq-item">
+            <h4>Is there a free trial?</h4>
+            <p>Yes. Every new account gets 2 free expert searches to try Expert Edge risk-free. No credit card required.</p>
+          </div>
+
+          <div class="faq-item">
+            <h4>What about data privacy and security?</h4>
+            <p>All data is encrypted in transit and at rest. We comply with HIPAA, GDPR, and other industry standards. Your search history is private and never shared.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="cta-background">
+        <div class="gradient-orb orb-3"></div>
+      </div>
+
+      <div class="container cta-content">
+        <h2>Ready to Verify Experts?</h2>
+        <p>Start with 2 free searches. No credit card required.</p>
+        <a href="/directory" class="btn btn-primary btn-lg">
+          <span>Try Now</span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Expert Edge</h4>
+          <p>Professional expert verification platform for legal professionals.</p>
+        </div>
+        <div>
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="/directory">Expert Directory</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/value">Value</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#privacy">Privacy</a></li>
+            <li><a href="#terms">Terms</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Expert Edge. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Pricing Hero */
+    .pricing-hero {
+      padding: 6rem 0 4rem;
+      background: linear-gradient(180deg, #F5F5F5, white);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-header h1 {
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      color: #001F5B;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: #001F5B;
+      margin-bottom: 1rem;
+    }
+
+    .section-header p {
+      font-size: 1.1rem;
+      color: #606060;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Billing Toggle */
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .toggle-label {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #606060;
+    }
+
+    .savings-badge {
+      display: inline-block;
+      background: #C4A77D;
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-left: 0.5rem;
+    }
+
+    .toggle-switch {
+      width: 60px;
+      height: 32px;
+      background: #E8E8E8;
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      position: relative;
+      transition: background 0.3s;
+    }
+
+    .toggle-switch.active {
+      background: #C4A77D;
+    }
+
+    .toggle-slider {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 28px;
+      height: 28px;
+      background: white;
+      border-radius: 14px;
+      transition: left 0.3s;
+      display: block;
+    }
+
+    .toggle-switch.active .toggle-slider {
+      left: 30px;
+    }
+
+    /* Pricing Section */
+    .pricing-section {
+      padding: 4rem 0 6rem;
+      background: white;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .pricing-card {
+      position: relative;
+      background: white;
+      border: 2px solid rgba(196, 167, 125, 0.2);
+      border-radius: 12px;
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+      animation: slideInUp 0.6s ease-out backwards;
+    }
+
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .pricing-card:hover {
+      border-color: #C4A77D;
+      box-shadow: 0 20px 40px rgba(196, 167, 125, 0.1);
+      transform: translateY(-5px);
+    }
+
+    .pricing-card.featured {
+      border-color: #C4A77D;
+      box-shadow: 0 20px 50px rgba(196, 167, 125, 0.15);
+      transform: scale(1.05);
+    }
+
+    .plan-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #C4A77D;
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+
+    .plan-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .plan-header h3 {
+      color: #001F5B;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .plan-description {
+      color: #606060;
+      font-size: 0.9rem;
+    }
+
+    /* Pricing Display */
+    .pricing-display {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .currency {
+      font-size: 1.25rem;
+      color: #C4A77D;
+      font-weight: 600;
+    }
+
+    .amount {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #001F5B;
+    }
+
+    .period {
+      color: #606060;
+      font-size: 1rem;
+    }
+
+    .custom-pricing {
+      font-size: 2rem;
+      color: #001F5B;
+      font-weight: 600;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      text-decoration: none;
+      font-family: inherit;
+    }
+
+    .btn-block {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #C4A77D, #b39568);
+      color: white;
+      box-shadow: 0 10px 30px rgba(196, 167, 125, 0.2);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 40px rgba(196, 167, 125, 0.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #001F5B;
+      border: 2px solid #001F5B;
+    }
+
+    .btn-outline:hover {
+      background: #001F5B;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .btn-lg {
+      padding: 1.25rem 2.5rem;
+      font-size: 1.05rem;
+    }
+
+    .arrow {
+      transition: transform 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn:hover .arrow {
+      transform: translateX(4px);
+    }
+
+    /* Divider */
+    .divider {
+      height: 1px;
+      background: rgba(196, 167, 125, 0.2);
+      margin: 1.5rem 0;
+    }
+
+    /* Feature List */
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .feature-list li {
+      padding: 0.75rem 0;
+      color: #606060;
+      font-size: 0.95rem;
+      border-bottom: 1px solid rgba(196, 167, 125, 0.1);
+    }
+
+    .feature-list li:last-child {
+      border-bottom: none;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      padding: 6rem 0;
+      background: linear-gradient(180deg, #F5F5F5, white);
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .faq-item {
+      animation: slideInUp 0.6s ease-out backwards;
+    }
+
+    .faq-item h4 {
+      color: #001F5B;
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+
+    .faq-item p {
+      color: #606060;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      position: relative;
+      padding: 6rem 0;
+      color: white;
+      overflow: hidden;
+    }
+
+    .cta-background {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #001F5B 0%, #003A8A 100%);
+      z-index: 0;
+    }
+
+    .gradient-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.1;
+    }
+
+    .orb-3 {
+      width: 600px;
+      height: 600px;
+      background: #C4A77D;
+      top: -300px;
+      left: -300px;
+      animation: float 12s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(30px, -30px); }
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .cta-section p {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 2rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Footer */
+    .footer {
+      background: #001F5B;
+      color: white;
+      padding: 3rem 0 1.5rem;
+      border-top: 3px solid #C4A77D;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-grid h4 {
+      color: #C4A77D;
+      margin-bottom: 1rem;
+    }
+
+    .footer-grid p {
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+    }
+
+    .footer-grid ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-grid li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-grid a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-grid a:hover {
+      color: #C4A77D;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    @media (max-width: 768px) {
+      .pricing-card.featured {
+        transform: scale(1);
+      }
+
+      .pricing-grid {
+        gap: 1.5rem;
+      }
+
+      .toggle-container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+
+  <script>
+    const toggle = document.getElementById('billingToggle');
+    const amounts = document.querySelectorAll('.amount');
+    const monthlyNotes = document.querySelectorAll('.monthly-note');
+    const annualNotes = document.querySelectorAll('.annual-note');
+
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('active');
+      const isAnnual = toggle.classList.contains('active');
+
+      amounts.forEach(amount => {
+        const monthlyPrice = parseInt(amount.dataset.monthly);
+        const annualPrice = parseInt(amount.dataset.annual);
+        amount.textContent = isAnnual ? annualPrice : monthlyPrice;
+      });
+
+      monthlyNotes.forEach(note => {
+        note.style.display = isAnnual ? 'none' : 'inline';
+      });
+
+      annualNotes.forEach(note => {
+        note.style.display = isAnnual ? 'inline' : 'none';
+      });
+    });
+  </script>
+</BaseLayout>

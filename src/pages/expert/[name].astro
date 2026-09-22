@@ -1,0 +1,699 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SiteHeader from "../../components/SiteHeader.astro";
+import expertData from '../../../expert_data.json';
+
+interface Props {
+  params: {
+    name: string;
+  };
+}
+
+export async function getStaticPaths() {
+  return expertData.map((expert) => ({
+    params: { name: expert.name.replace(/\s+/g, '-').toLowerCase() },
+    props: { expert },
+  }));
+}
+
+interface Expert {
+  name: string;
+  specialty: string;
+  industry: string;
+  score: number;
+  risk_level: string;
+  summary: string;
+  flags: string[];
+  dossier: {
+    retractions: any;
+    license: any;
+    academic: any;
+    funding: any;
+    litigation: any;
+    patents: any;
+    publications: any;
+  };
+  original_sources: string[];
+}
+
+const { expert } = Astro.props as { expert: Expert };
+---
+
+<BaseLayout title={`${expert.name} — Expert Edge`} description={`Complete verification dossier for ${expert.name}. Risk level: ${expert.risk_level}.`}>
+  <SiteHeader />
+
+  <main>
+    <!-- Expert Hero Section -->
+    <section class="expert-hero">
+      <div class="container">
+        <a href="/directory" class="breadcrumb">← Back to Directory</a>
+
+        <div class="expert-header-section">
+          <div class="header-content">
+            <h1>{expert.name}</h1>
+            <p class="expert-subtitle">{expert.specialty} • {expert.industry}</p>
+
+            <div class="risk-assessment">
+              <span class={`risk-badge risk-${expert.risk_level.toLowerCase()}`}>
+                {expert.risk_level} RISK
+              </span>
+              <div class="risk-score">
+                <span class="score-label">Risk Score:</span>
+                <span class="score-value">{expert.score}/10</span>
+              </div>
+            </div>
+
+            <p class="expert-summary">{expert.summary}</p>
+
+            {expert.flags.length > 0 && (
+              <div class="flags-container">
+                <h3>Flags</h3>
+                <div class="flags-list">
+                  {expert.flags.map((flag) => (
+                    <span class="flag">{flag}</span>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dossier Section -->
+    <section class="dossier-section">
+      <div class="container">
+        <div class="dossier-grid">
+          <!-- Academic Credentials -->
+          {expert.dossier.academic && (
+            <div class="dossier-card">
+              <div class="card-icon">📚</div>
+              <h3>Academic Profile</h3>
+              <div class="card-content">
+                <div class="data-row">
+                  <span class="label">H-Index:</span>
+                  <span class="value">{expert.dossier.academic.h_index}</span>
+                </div>
+                <div class="data-row">
+                  <span class="label">Citations:</span>
+                  <span class="value">{expert.dossier.academic.citations.toLocaleString()}</span>
+                </div>
+                <div class="data-row">
+                  <span class="label">Source:</span>
+                  <span class="value">{expert.dossier.academic.source}</span>
+                </div>
+              </div>
+            </div>
+          )}
+
+          <!-- Publications -->
+          {expert.dossier.publications && (
+            <div class="dossier-card">
+              <div class="card-icon">📄</div>
+              <h3>Publications</h3>
+              <div class="card-content">
+                <div class="data-row">
+                  <span class="label">PubMed Count:</span>
+                  <span class="value">{expert.dossier.publications.count}</span>
+                </div>
+                <div class="data-row">
+                  <span class="label">Source:</span>
+                  <span class="value">{expert.dossier.publications.source}</span>
+                </div>
+              </div>
+            </div>
+          )}
+
+          <!-- License Status -->
+          {expert.dossier.license && (
+            <div class="dossier-card">
+              <div class="card-icon">✓</div>
+              <h3>License Status</h3>
+              <div class="card-content">
+                <div class="data-row">
+                  <span class="label">Status:</span>
+                  <span class={`value status-${expert.dossier.license.status.toLowerCase()}`}>
+                    {expert.dossier.license.status}
+                  </span>
+                </div>
+                <div class="data-row">
+                  <span class="label">Board:</span>
+                  <span class="value">{expert.dossier.license.board}</span>
+                </div>
+              </div>
+            </div>
+          )}
+
+          <!-- Funding -->
+          {expert.dossier.funding && (
+            <div class="dossier-card">
+              <div class="card-icon">💰</div>
+              <h3>Research Funding</h3>
+              <div class="card-content">
+                <div class="data-row">
+                  <span class="label">Total Funding:</span>
+                  <span class="value">${(expert.dossier.funding.amount / 1000).toFixed(0)}K</span>
+                </div>
+                <div class="data-row">
+                  <span class="label">Grants:</span>
+                  <span class="value">{expert.dossier.funding.grants}</span>
+                </div>
+                <div class="data-row">
+                  <span class="label">Source:</span>
+                  <span class="value">{expert.dossier.funding.source}</span>
+                </div>
+              </div>
+            </div>
+          )}
+
+          <!-- Patents -->
+          {expert.dossier.patents && (
+            <div class="dossier-card">
+              <div class="card-icon">⚙️</div>
+              <h3>Patents</h3>
+              <div class="card-content">
+                <div class="data-row">
+                  <span class="label">Patent Count:</span>
+                  <span class="value">{expert.dossier.patents.count || 0}</span>
+                </div>
+              </div>
+            </div>
+          )}
+
+          <!-- Litigation -->
+          {expert.dossier.litigation && (
+            <div class="dossier-card">
+              <div class="card-icon">⚖️</div>
+              <h3>Litigation History</h3>
+              <div class="card-content">
+                <div class="data-row">
+                  <span class="label">Appearances:</span>
+                  <span class="value">{expert.dossier.litigation.appearances}</span>
+                </div>
+                <div class="data-row">
+                  <span class="label">Categories:</span>
+                  <span class="value">
+                    {expert.dossier.litigation.categories?.join(', ') || 'N/A'}
+                  </span>
+                </div>
+                <div class="data-row">
+                  <span class="label">Source:</span>
+                  <span class="value">{expert.dossier.litigation.source}</span>
+                </div>
+              </div>
+            </div>
+          )}
+
+          <!-- Retractions -->
+          {expert.dossier.retractions && (
+            <div class="dossier-card retraction-alert">
+              <div class="card-icon">⚠️</div>
+              <h3>Retractions</h3>
+              <div class="card-content">
+                <p>Retracted Publications: {expert.dossier.retractions.count || 0}</p>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+
+    <!-- Data Sources Section -->
+    <section class="sources-section">
+      <div class="container">
+        <h2>Data Sources</h2>
+        <p class="sources-intro">All information has been verified and sourced from authoritative public registries.</p>
+
+        <div class="sources-list">
+          {expert.original_sources.map((source) => (
+            <div class="source-item">
+              <span class="check">✓</span>
+              <span>{source}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="cta-background">
+        <div class="gradient-orb orb-3"></div>
+      </div>
+
+      <div class="container cta-content">
+        <h2>Need Help with Expert Verification?</h2>
+        <p>Contact our team for additional verification support or bulk expert assessments.</p>
+        <a href="/pricing" class="btn btn-primary btn-lg">
+          <span>View Plans</span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Expert Edge</h4>
+          <p>Professional expert verification platform for legal professionals.</p>
+        </div>
+        <div>
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="/directory">Expert Directory</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/value">Value</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#privacy">Privacy</a></li>
+            <li><a href="#terms">Terms</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Expert Edge. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      display: inline-block;
+      color: #C4A77D;
+      text-decoration: none;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      transition: color 0.3s ease;
+    }
+
+    .breadcrumb:hover {
+      color: #001F5B;
+    }
+
+    /* Expert Hero */
+    .expert-hero {
+      padding: 4rem 0 3rem;
+      background: linear-gradient(180deg, #F5F5F5, white);
+    }
+
+    .expert-header-section {
+      animation: slideInUp 0.6s ease-out;
+    }
+
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .header-content h1 {
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      color: #001F5B;
+      margin-bottom: 0.5rem;
+    }
+
+    .expert-subtitle {
+      font-size: 1.2rem;
+      color: #606060;
+      margin-bottom: 2rem;
+    }
+
+    /* Risk Assessment */
+    .risk-assessment {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .risk-badge {
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+
+    .risk-low {
+      background: rgba(87, 180, 135, 0.15);
+      color: #57b487;
+    }
+
+    .risk-medium {
+      background: rgba(215, 162, 74, 0.15);
+      color: #d7a24a;
+    }
+
+    .risk-high {
+      background: rgba(229, 103, 122, 0.15);
+      color: #e5677a;
+    }
+
+    .risk-score {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .score-label {
+      color: #606060;
+      font-weight: 500;
+    }
+
+    .score-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #C4A77D;
+    }
+
+    .expert-summary {
+      font-size: 1.05rem;
+      color: #606060;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    /* Flags */
+    .flags-container h3 {
+      color: #001F5B;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .flags-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .flag {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: #e5677a;
+      color: white;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* Dossier Section */
+    .dossier-section {
+      padding: 6rem 0;
+      background: white;
+    }
+
+    .dossier-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .dossier-card {
+      background: linear-gradient(135deg, #F5F5F5, white);
+      border: 1px solid rgba(196, 167, 125, 0.2);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      animation: slideInUp 0.6s ease-out backwards;
+    }
+
+    .dossier-card:hover {
+      border-color: #C4A77D;
+      box-shadow: 0 15px 30px rgba(196, 167, 125, 0.1);
+      transform: translateY(-5px);
+    }
+
+    .dossier-card.retraction-alert {
+      border-color: #e5677a;
+      background: rgba(229, 103, 122, 0.05);
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .dossier-card h3 {
+      color: #001F5B;
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .data-row {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(196, 167, 125, 0.1);
+    }
+
+    .data-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .label {
+      color: #999;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    .value {
+      color: #001F5B;
+      font-weight: 600;
+      text-align: right;
+    }
+
+    .status-active {
+      color: #57b487 !important;
+      font-weight: 700;
+    }
+
+    .status-inactive {
+      color: #e5677a !important;
+      font-weight: 700;
+    }
+
+    /* Sources Section */
+    .sources-section {
+      padding: 6rem 0;
+      background: linear-gradient(180deg, #F5F5F5, white);
+    }
+
+    .sources-section h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: #001F5B;
+      margin-bottom: 0.5rem;
+    }
+
+    .sources-intro {
+      color: #606060;
+      margin-bottom: 2rem;
+      font-size: 1.05rem;
+    }
+
+    .sources-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .source-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 8px;
+      border: 1px solid rgba(196, 167, 125, 0.2);
+    }
+
+    .check {
+      color: #57b487;
+      font-weight: 700;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .source-item span:last-child {
+      color: #001F5B;
+      font-weight: 500;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      position: relative;
+      padding: 6rem 0;
+      color: white;
+      overflow: hidden;
+    }
+
+    .cta-background {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #001F5B 0%, #003A8A 100%);
+      z-index: 0;
+    }
+
+    .gradient-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.1;
+    }
+
+    .orb-3 {
+      width: 600px;
+      height: 600px;
+      background: #C4A77D;
+      top: -300px;
+      left: -300px;
+      animation: float 12s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(30px, -30px); }
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .cta-section p {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 2rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      text-decoration: none;
+      font-family: inherit;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #C4A77D, #b39568);
+      color: white;
+      box-shadow: 0 10px 30px rgba(196, 167, 125, 0.2);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 40px rgba(196, 167, 125, 0.3);
+    }
+
+    .btn-lg {
+      padding: 1.25rem 2.5rem;
+      font-size: 1.05rem;
+    }
+
+    .arrow {
+      transition: transform 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn:hover .arrow {
+      transform: translateX(4px);
+    }
+
+    /* Footer */
+    .footer {
+      background: #001F5B;
+      color: white;
+      padding: 3rem 0 1.5rem;
+      border-top: 3px solid #C4A77D;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-grid h4 {
+      color: #C4A77D;
+      margin-bottom: 1rem;
+    }
+
+    .footer-grid p {
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+    }
+
+    .footer-grid ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-grid li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-grid a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-grid a:hover {
+      color: #C4A77D;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  </style>
+</BaseLayout>
