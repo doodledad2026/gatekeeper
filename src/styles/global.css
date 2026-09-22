@@ -13,17 +13,16 @@
   --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
 
-  /* Navy and brass palette from Gatekeeper logo. `ink` = light text, `paper` = dark surfaces —
-     kept as the semantic names throughout components. */
+  /* Legal Navy & Justice Gold palette from Expert Edge logo. */
   --color-ink: #edeff2;
   --color-ink-soft: #8b94a2;
   --color-paper: #0f1419;
   --color-paper-alt: #161b24;
   --color-panel: #0a0e13;
   --color-line: #ffffff1f;
-  --color-signal: #d4af37;
+  --color-signal: #c4a77d;
   --color-signal-soft: #3a3420;
-  --color-navy: #1a3a52;
+  --color-navy: #001f5b;
 
   --color-risk-low: #57b487;
   --color-risk-medium: #d7a24a;

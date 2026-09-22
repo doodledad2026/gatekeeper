@@ -4,7 +4,7 @@ export type GuideLink = { label: string; href: string };
 export type GuideGroup = { label: string; children: GuideLink[] };
 
 export const guideNav: (GuideLink | GuideGroup)[] = [
-  { label: "What is Gatekeeper", href: "/guide/what-is-gatekeeper/" },
+  { label: "What is Expert Edge", href: "/guide/what-is-gatekeeper/" },
   { label: "Why Use It", href: "/guide/why-use-it/" },
   { label: "How To Use", href: "/guide/how-to-use/" },
   {

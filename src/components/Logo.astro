@@ -1,14 +1,25 @@
 ---
-// Sharp, flat gate mark — no gradients. A framed checkpoint crossbar
-// with a solid seal chip standing in for "verified."
+// Expert Edge logo: shield with checkmark in Legal Navy & Justice Gold
 interface Props {
   class?: string;
 }
 const { class: className = "size-8" } = Astro.props;
 ---
-<svg class={className} viewBox="0 0 48 48" aria-hidden="true">
-  <rect x="3" y="3" width="42" height="42" fill="none" stroke="currentColor" stroke-width="3" />
-  <line x1="24" y1="3" x2="24" y2="45" stroke="currentColor" stroke-width="3" />
-  <line x1="3" y1="24" x2="45" y2="24" stroke="currentColor" stroke-width="3" />
-  <rect x="31" y="31" width="14" height="14" class="fill-signal" />
+<svg class={className} viewBox="0 0 64 64" aria-hidden="true">
+  <!-- Shield outline in Legal Navy -->
+  <path
+    d="M32 8 L48 16 L48 32 C48 44 32 56 32 56 C32 56 16 44 16 32 L16 16 Z"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="3"
+    stroke-linejoin="round"
+  />
+
+  <!-- Checkmark in Justice Gold -->
+  <g class="fill-signal">
+    <path
+      d="M28 40 L21 33 L24 30 L28 34 L40 18 L43 21 Z"
+      fill="currentColor"
+    />
+  </g>
 </svg>
