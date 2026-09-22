@@ -6,191 +6,257 @@ import SiteHeader from "../components/SiteHeader.astro";
 <BaseLayout title="Expert Edge — Expert Verification System" description="Verify expert witnesses and consultants against public records.">
   <SiteHeader />
 
-  <!-- Hero Section -->
-  <section style="padding: 5rem 0; background: white;">
-    <div class="container-sm text-center">
-      <h1 style="margin-bottom: 1rem; font-size: 2.75rem;">
-        Stop Vetting Experts Manually
-      </h1>
-      <p style="font-size: 1.25rem; color: #999; margin-bottom: 2rem;">
-        Expert Edge verifies expert witnesses and consultants against 8 public registries in seconds. Get defensible risk scores for every expert.
-      </p>
-      <div style="display: flex; gap: 1rem; justify-content: center;">
-        <a href="#get-started" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">
-          Get Free Instant Access
-        </a>
-        <a href="#learn-more" class="btn btn-outline" style="font-size: 1.1rem; padding: 1rem 2rem;">
-          Learn More
-        </a>
+  <main>
+    <!-- Hero Section with Gradient -->
+    <section class="hero">
+      <div class="hero-background">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="grid-pattern"></div>
       </div>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section id="features" style="padding: 5rem 0; background: #F5F5F5;">
-    <div class="container">
-      <h2 style="text-align: center; margin-bottom: 3rem;">Key Features</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-        
-        <div style="background: white; padding: 2rem; border-radius: 8px; border-left: 4px solid #C4A77D;">
-          <h3 style="color: #001F5B; margin-bottom: 1rem;">Instant Verification</h3>
-          <p>Search any expert by name and get results in seconds. Cross-referenced against 8 major public registries.</p>
-        </div>
-
-        <div style="background: white; padding: 2rem; border-radius: 8px; border-left: 4px solid #C4A77D;">
-          <h3 style="color: #001F5B; margin-bottom: 1rem;">Risk Scoring</h3>
-          <p>Automated risk assessment based on publications, retractions, funding, licenses, and disciplinary records.</p>
-        </div>
-
-        <div style="background: white; padding: 2rem; border-radius: 8px; border-left: 4px solid #C4A77D;">
-          <h3 style="color: #001F5B; margin-bottom: 1rem;">Source Verification</h3>
-          <p>See exactly which registries confirmed each credential. Fully documented and defensible.</p>
-        </div>
-
-        <div style="background: white; padding: 2rem; border-radius: 8px; border-left: 4px solid #C4A77D;">
-          <h3 style="color: #001F5B; margin-bottom: 1rem;">Easy Export</h3>
-          <p>Download comprehensive reports with all findings, citations, and source documentation.</p>
-        </div>
-
-        <div style="background: white; padding: 2rem; border-radius: 8px; border-left: 4px solid #C4A77D;">
-          <h3 style="color: #001F5B; margin-bottom: 1rem;">Always Current</h3>
-          <p>Data updates daily from live sources. Your reports are always based on the latest information.</p>
-        </div>
-
-        <div style="background: white; padding: 2rem; border-radius: 8px; border-left: 4px solid #C4A77D;">
-          <h3 style="color: #001F5B; margin-bottom: 1rem;">Confidential</h3>
-          <p>Enterprise-grade security. Your searches and reports are private and encrypted.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- How It Works Section -->
-  <section id="how-it-works" style="padding: 5rem 0; background: white;">
-    <div class="container-sm">
-      <h2 style="text-align: center; margin-bottom: 3rem;">How It Works</h2>
       
-      <div style="display: flex; gap: 2rem; margin-bottom: 2rem; align-items: flex-start;">
-        <div style="flex-shrink: 0;">
-          <div style="width: 50px; height: 50px; background: #C4A77D; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700;">1</div>
+      <div class="container hero-content">
+        <div class="hero-logo-wrapper">
+          <div class="logo-container">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="hero-logo">
+              <!-- Shield -->
+              <path d="M100 20 L140 40 L140 90 C140 130 100 160 100 160 C100 160 60 130 60 90 L60 40 Z" fill="none" stroke="#001F5B" stroke-width="4" stroke-linejoin="round"/>
+              
+              <!-- Lightning bolt checkmark in gold -->
+              <g>
+                <path d="M85 70 L75 95 L85 95 L75 130" stroke="#C4A77D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <path d="M95 95 L110 75 L125 95" stroke="#C4A77D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </g>
+            </svg>
+          </div>
         </div>
-        <div>
-          <h3 style="color: #001F5B; margin-bottom: 0.5rem;">Search</h3>
-          <p>Enter the expert's name or credentials. Our system searches across all registries simultaneously.</p>
+
+        <h1 class="hero-title">
+          <span class="text-gradient">Verify Experts</span><br/>
+          <span class="text-highlight">Instantly</span>
+        </h1>
+        
+        <p class="hero-subtitle">
+          Cross-check expert witnesses against 8 public registries in seconds. 
+          Get defensible risk scores backed by data.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#get-started" class="btn btn-primary btn-lg">
+            <span>Get Free Access</span>
+            <span class="arrow">→</span>
+          </a>
+          <a href="#learn-more" class="btn btn-secondary btn-lg">
+            <span>See How It Works</span>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-number">8</div>
+            <div class="stat-label">Data Sources</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">&lt;2s</div>
+            <div class="stat-label">Verification Time</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Public Records</div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div style="display: flex; gap: 2rem; margin-bottom: 2rem; align-items: flex-start;">
-        <div style="flex-shrink: 0;">
-          <div style="width: 50px; height: 50px; background: #C4A77D; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700;">2</div>
+    <!-- Features Section -->
+    <section id="features" class="features">
+      <div class="container">
+        <div class="section-header">
+          <h2>Powerful Verification Features</h2>
+          <p>Everything you need to vet experts with confidence</p>
         </div>
-        <div>
-          <h3 style="color: #001F5B; margin-bottom: 0.5rem;">Verify</h3>
-          <p>Cross-reference results against publications, retractions, funding, patents, bar status, and more.</p>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Lightning Fast</h3>
+            <p>Results in seconds, not days. Simultaneous searches across all registries.</p>
+            <div class="feature-accent"></div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🔍</div>
+            <h3>Comprehensive</h3>
+            <p>Publications, retractions, funding, patents, licenses, and disciplinary records.</p>
+            <div class="feature-accent"></div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Risk Scoring</h3>
+            <p>Automated analysis with defensible risk scores and detailed documentation.</p>
+            <div class="feature-accent"></div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🔐</div>
+            <h3>Secure & Private</h3>
+            <p>Enterprise-grade encryption. Your searches and reports stay confidential.</p>
+            <div class="feature-accent"></div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📈</div>
+            <h3>Always Updated</h3>
+            <p>Data refreshes daily from live sources. Never outdated information.</p>
+            <div class="feature-accent"></div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">✓</div>
+            <h3>Fully Sourced</h3>
+            <p>See exactly which registries confirmed each credential. Complete transparency.</p>
+            <div class="feature-accent"></div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div style="display: flex; gap: 2rem; align-items: flex-start;">
-        <div style="flex-shrink: 0;">
-          <div style="width: 50px; height: 50px; background: #C4A77D; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700;">3</div>
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <h2>How It Works</h2>
+          <p>Three simple steps to expert verification</p>
         </div>
-        <div>
-          <h3 style="color: #001F5B; margin-bottom: 0.5rem;">Decide</h3>
-          <p>Get a defensible risk score and full documentation. Make informed decisions backed by data.</p>
+
+        <div class="steps-container">
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <div class="step-content">
+              <h3>Search</h3>
+              <p>Enter the expert's name or credentials. Our system instantly searches across all major public registries simultaneously.</p>
+            </div>
+            <div class="step-line"></div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <div class="step-content">
+              <h3>Analyze</h3>
+              <p>Cross-reference results against publications, funding, licenses, and disciplinary records with precision scoring.</p>
+            </div>
+            <div class="step-line"></div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <div class="step-content">
+              <h3>Decide</h3>
+              <p>Get a defensible risk score with full documentation and source verification for confident decision-making.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Data Sources -->
-  <section style="padding: 5rem 0; background: #F5F5F5;">
-    <div class="container">
-      <h2 style="text-align: center; margin-bottom: 3rem;">We Check 8 Major Public Registries</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-        <div style="text-align: center;">
-          <div style="color: #C4A77D; font-size: 2rem; margin-bottom: 0.5rem;">📰</div>
-          <h4 style="color: #001F5B;">PubMed</h4>
-          <p style="font-size: 0.9rem;">Medical publications &amp; indexed research</p>
+    <!-- Data Sources Section -->
+    <section class="data-sources">
+      <div class="container">
+        <div class="section-header">
+          <h2>Verified Against 8 Major Registries</h2>
+          <p>Only official public sources. No data brokers or scraping.</p>
         </div>
-        <div style="text-align: center;">
-          <div style="color: #C4A77D; font-size: 2rem; margin-bottom: 0.5rem;">✓</div>
-          <h4 style="color: #001F5B;">ORCID</h4>
-          <p style="font-size: 0.9rem;">Researcher identity &amp; publication history</p>
-        </div>
-        <div style="text-align: center;">
-          <div style="color: #C4A77D; font-size: 2rem; margin-bottom: 0.5rem;">💰</div>
-          <h4 style="color: #001F5B;">NIH Reporter</h4>
-          <p style="font-size: 0.9rem;">Federal research funding records</p>
-        </div>
-        <div style="text-align: center;">
-          <div style="color: #C4A77D; font-size: 2rem; margin-bottom: 0.5rem;">🔗</div>
-          <h4 style="color: #001F5B;">CrossRef</h4>
-          <p style="font-size: 0.9rem;">Publication metadata &amp; citations</p>
-        </div>
-        <div style="text-align: center;">
-          <div style="color: #C4A77D; font-size: 2rem; margin-bottom: 0.5rem;">⚠️</div>
-          <h4 style="color: #001F5B;">RetractionWatch</h4>
-          <p style="font-size: 0.9rem;">Retracted &amp; flagged publications</p>
-        </div>
-        <div style="text-align: center;">
-          <div style="color: #C4A77D; font-size: 2rem; margin-bottom: 0.5rem;">📜</div>
-          <h4 style="color: #001F5B;">Patents</h4>
-          <p style="font-size: 0.9rem;">USPTO patent filings &amp; citations</p>
-        </div>
-        <div style="text-align: center;">
-          <div style="color: #C4A77D; font-size: 2rem; margin-bottom: 0.5rem;">⚖️</div>
-          <h4 style="color: #001F5B;">State Bar</h4>
-          <p style="font-size: 0.9rem;">Attorney licenses &amp; disciplinary records</p>
-        </div>
-        <div style="text-align: center;">
-          <div style="color: #C4A77D; font-size: 2rem; margin-bottom: 0.5rem;">🔬</div>
-          <h4 style="color: #001F5B;">arXiv</h4>
-          <p style="font-size: 0.9rem;">Preprints &amp; academic research</p>
+
+        <div class="sources-grid">
+          <div class="source-item">
+            <div class="source-icon">📰</div>
+            <div class="source-name">PubMed</div>
+            <div class="source-desc">Medical & Research Publications</div>
+          </div>
+          <div class="source-item">
+            <div class="source-icon">👤</div>
+            <div class="source-name">ORCID</div>
+            <div class="source-desc">Researcher Identity & History</div>
+          </div>
+          <div class="source-item">
+            <div class="source-icon">💰</div>
+            <div class="source-name">NIH Reporter</div>
+            <div class="source-desc">Federal Research Funding</div>
+          </div>
+          <div class="source-item">
+            <div class="source-icon">🔗</div>
+            <div class="source-name">CrossRef</div>
+            <div class="source-desc">Publication Metadata</div>
+          </div>
+          <div class="source-item">
+            <div class="source-icon">⚠️</div>
+            <div class="source-name">RetractionWatch</div>
+            <div class="source-desc">Retracted Publications</div>
+          </div>
+          <div class="source-item">
+            <div class="source-icon">📜</div>
+            <div class="source-name">USPTO Patents</div>
+            <div class="source-desc">Patent Records & Citations</div>
+          </div>
+          <div class="source-item">
+            <div class="source-icon">⚖️</div>
+            <div class="source-name">State Bar</div>
+            <div class="source-desc">Attorney Licenses & Records</div>
+          </div>
+          <div class="source-item">
+            <div class="source-icon">🔬</div>
+            <div class="source-name">arXiv</div>
+            <div class="source-desc">Preprints & Academic Research</div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA Section -->
-  <section id="get-started" style="padding: 5rem 0; background: #001F5B; color: white; text-align: center;">
-    <div class="container-sm">
-      <h2 style="color: white; margin-bottom: 1rem;">Start Vetting Experts Today</h2>
-      <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 2rem;">
-        Get instant access to verified expert records. Free for your first 5 searches.
-      </p>
-      <a href="mailto:hello@expertedge.com" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">
-        Get Free Access →
-      </a>
-    </div>
-  </section>
+    <!-- CTA Section -->
+    <section id="get-started" class="cta-section">
+      <div class="cta-background">
+        <div class="gradient-orb orb-3"></div>
+        <div class="gradient-orb orb-4"></div>
+      </div>
+      
+      <div class="container cta-content">
+        <h2>Ready to Start Verifying?</h2>
+        <p>Get instant access to expert verification. Free for your first 5 searches.</p>
+        <a href="mailto:hello@expertedge.com" class="btn btn-primary btn-lg">
+          <span>Get Free Access Now</span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer style="background: #001F5B; color: white; padding: 3rem 0; border-top: 3px solid #C4A77D;">
+  <footer class="footer">
     <div class="container">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-        <div>
-          <h4 style="color: #C4A77D; margin-bottom: 1rem;">Expert Edge</h4>
-          <p style="color: rgba(255,255,255,0.7);">Professional expert verification for legal professionals.</p>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Expert Edge</h4>
+          <p>Professional expert verification for legal professionals.</p>
         </div>
-        <div>
-          <h4 style="color: #C4A77D; margin-bottom: 1rem;">Product</h4>
-          <ul style="list-style: none;">
-            <li><a href="#features" style="color: rgba(255,255,255,0.7); text-decoration: none;">Features</a></li>
-            <li><a href="#pricing" style="color: rgba(255,255,255,0.7); text-decoration: none;">Pricing</a></li>
-            <li><a href="#" style="color: rgba(255,255,255,0.7); text-decoration: none;">Documentation</a></li>
+        <div class="footer-section">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#pricing">Pricing</a></li>
           </ul>
         </div>
-        <div>
-          <h4 style="color: #C4A77D; margin-bottom: 1rem;">Company</h4>
-          <ul style="list-style: none;">
-            <li><a href="#about" style="color: rgba(255,255,255,0.7); text-decoration: none;">About Us</a></li>
-            <li><a href="#contact" style="color: rgba(255,255,255,0.7); text-decoration: none;">Contact</a></li>
-            <li><a href="#privacy" style="color: rgba(255,255,255,0.7); text-decoration: none;">Privacy</a></li>
+        <div class="footer-section">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#privacy">Privacy</a></li>
           </ul>
         </div>
       </div>
-      <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 2rem; text-align: center; color: rgba(255,255,255,0.6);">
+      <div class="footer-bottom">
         <p>&copy; 2024 Expert Edge. All rights reserved.</p>
       </div>
     </div>
@@ -199,6 +265,605 @@ import SiteHeader from "../components/SiteHeader.astro";
   <style>
     :global(html) {
       scroll-behavior: smooth;
+    }
+
+    :global(body) {
+      overflow-x: hidden;
+    }
+
+    main {
+      position: relative;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 4rem 0;
+    }
+
+    .hero-background {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .grid-pattern {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(196, 167, 125, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(196, 167, 125, 0.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+      animation: drift 20s linear infinite;
+    }
+
+    .gradient-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.1;
+    }
+
+    .orb-1 {
+      width: 500px;
+      height: 500px;
+      background: #C4A77D;
+      top: -200px;
+      right: -200px;
+      animation: float 8s ease-in-out infinite;
+    }
+
+    .orb-2 {
+      width: 400px;
+      height: 400px;
+      background: #001F5B;
+      bottom: -150px;
+      left: -150px;
+      animation: float 10s ease-in-out infinite 1s;
+    }
+
+    .orb-3 {
+      width: 600px;
+      height: 600px;
+      background: #C4A77D;
+      top: -300px;
+      left: -300px;
+      animation: float 12s ease-in-out infinite;
+    }
+
+    .orb-4 {
+      width: 500px;
+      height: 500px;
+      background: #001F5B;
+      bottom: -250px;
+      right: -250px;
+      animation: float 10s ease-in-out infinite 2s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(30px, -30px); }
+    }
+
+    @keyframes drift {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(50px, 50px); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-logo-wrapper {
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .logo-container {
+      width: 120px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: scaleIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8) rotateZ(-10deg);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1) rotateZ(0);
+      }
+    }
+
+    .hero-logo {
+      filter: drop-shadow(0 10px 30px rgba(0, 31, 91, 0.15));
+      animation: bobbing 3s ease-in-out infinite;
+    }
+
+    @keyframes bobbing {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: #001F5B;
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, #001F5B, #C4A77D);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .text-highlight {
+      color: #C4A77D;
+      position: relative;
+      display: inline-block;
+    }
+
+    .text-highlight::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #C4A77D, transparent);
+      border-radius: 2px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      color: #606060;
+      max-width: 600px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 4rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      text-decoration: none;
+      font-family: var(--font-body);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #C4A77D, #b39568);
+      color: white;
+      box-shadow: 0 10px 30px rgba(196, 167, 125, 0.2);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 40px rgba(196, 167, 125, 0.3);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #001F5B;
+      border: 2px solid #001F5B;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background: #001F5B;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .btn-lg {
+      padding: 1.25rem 2.5rem;
+      font-size: 1.05rem;
+    }
+
+    .arrow {
+      transition: transform 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn:hover .arrow {
+      transform: translateX(4px);
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(196, 167, 125, 0.2);
+    }
+
+    .stat {
+      text-align: center;
+      animation: fadeInUp 0.8s ease-out 0.2s backwards;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #C4A77D;
+      line-height: 1;
+    }
+
+    .stat-label {
+      color: #606060;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Features Section */
+    .features {
+      padding: 6rem 0;
+      background: linear-gradient(180deg, #F5F5F5, white);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: #001F5B;
+      margin-bottom: 1rem;
+      font-family: var(--font-display);
+    }
+
+    .section-header p {
+      font-size: 1.1rem;
+      color: #606060;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid rgba(196, 167, 125, 0.1);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      animation: slideInUp 0.6s ease-out backwards;
+    }
+
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .feature-card:hover {
+      border-color: #C4A77D;
+      box-shadow: 0 20px 40px rgba(196, 167, 125, 0.1);
+      transform: translateY(-5px);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .feature-card h3 {
+      color: #001F5B;
+      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
+    }
+
+    .feature-card p {
+      color: #606060;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .feature-accent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #C4A77D, transparent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover .feature-accent {
+      transform: scaleX(1);
+    }
+
+    /* How It Works */
+    .how-it-works {
+      padding: 6rem 0;
+      background: white;
+    }
+
+    .steps-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      position: relative;
+    }
+
+    .step-card {
+      padding: 2.5rem 2rem;
+      position: relative;
+      animation: slideInUp 0.6s ease-out backwards;
+    }
+
+    .step-card:nth-child(1) { animation-delay: 0s; }
+    .step-card:nth-child(2) { animation-delay: 0.1s; }
+    .step-card:nth-child(3) { animation-delay: 0.2s; }
+
+    .step-number {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: rgba(196, 167, 125, 0.2);
+      line-height: 1;
+      margin-bottom: 1rem;
+      font-family: var(--font-display);
+    }
+
+    .step-content h3 {
+      color: #001F5B;
+      margin-bottom: 0.75rem;
+      font-size: 1.4rem;
+    }
+
+    .step-content p {
+      color: #606060;
+      line-height: 1.7;
+    }
+
+    .step-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 0;
+      background: linear-gradient(180deg, #C4A77D, transparent);
+      transition: height 0.8s ease-out 0.3s;
+    }
+
+    .step-card:hover .step-line {
+      height: 100%;
+    }
+
+    /* Data Sources */
+    .data-sources {
+      padding: 6rem 0;
+      background: linear-gradient(180deg, white, #F5F5F5);
+    }
+
+    .sources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .source-item {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      border: 1px solid rgba(196, 167, 125, 0.1);
+      transition: all 0.3s ease;
+      animation: fadeInUp 0.6s ease-out backwards;
+    }
+
+    .source-item:nth-child(1) { animation-delay: 0s; }
+    .source-item:nth-child(2) { animation-delay: 0.1s; }
+    .source-item:nth-child(3) { animation-delay: 0.2s; }
+    .source-item:nth-child(4) { animation-delay: 0.3s; }
+    .source-item:nth-child(5) { animation-delay: 0.1s; }
+    .source-item:nth-child(6) { animation-delay: 0.2s; }
+    .source-item:nth-child(7) { animation-delay: 0.3s; }
+    .source-item:nth-child(8) { animation-delay: 0.4s; }
+
+    .source-item:hover {
+      border-color: #C4A77D;
+      box-shadow: 0 15px 30px rgba(196, 167, 125, 0.15);
+      transform: translateY(-3px);
+    }
+
+    .source-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .source-name {
+      color: #001F5B;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .source-desc {
+      color: #999;
+      font-size: 0.85rem;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      position: relative;
+      padding: 6rem 0;
+      color: white;
+      overflow: hidden;
+    }
+
+    .cta-background {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #001F5B 0%, #003d8a 100%);
+      z-index: 0;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: white;
+      margin-bottom: 1rem;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .cta-section p {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 2rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      animation: fadeInUp 0.8s ease-out 0.1s backwards;
+    }
+
+    .cta-section .btn {
+      animation: fadeInUp 0.8s ease-out 0.2s backwards;
+    }
+
+    /* Footer */
+    .footer {
+      background: #001F5B;
+      color: white;
+      padding: 3rem 0 1.5rem;
+      border-top: 3px solid #C4A77D;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-section h4 {
+      color: #C4A77D;
+      margin-bottom: 1rem;
+    }
+
+    .footer-section p {
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+      font-size: 0.9rem;
+    }
+
+    .footer-section ul {
+      list-style: none;
+    }
+
+    .footer-section li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-section a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section a:hover {
+      color: #C4A77D;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-ctas {
+        flex-direction: column;
+      }
+
+      .hero-stats {
+        gap: 2rem;
+      }
+
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .features-grid,
+      .sources-grid {
+        gap: 1.5rem;
+      }
+
+      .section-header h2 {
+        font-size: 1.75rem;
+      }
     }
   </style>
 </BaseLayout>
