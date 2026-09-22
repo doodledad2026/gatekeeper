@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gatekeeper — Multi-Industry Expert Verification Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #1a73e8;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-box h3 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+
+        .stat-box p {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .controls {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .control-group label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input[type="text"],
+        select {
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #1a73e8;
+            box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
+        }
+
+        .experts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .expert-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 5px solid #ddd;
+            cursor: pointer;
+        }
+
+        .expert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .expert-card.low { border-left-color: #34a853; }
+        .expert-card.medium { border-left-color: #fbbc04; }
+        .expert-card.high { border-left-color: #ea8b13; }
+        .expert-card.critical { border-left-color: #d33827; }
+
+        .expert-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .expert-name {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a73e8;
+        }
+
+        .risk-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .risk-badge.low { background: #c6f6d5; color: #22543d; }
+        .risk-badge.medium { background: #fef3c7; color: #78350f; }
+        .risk-badge.high { background: #fed7aa; color: #7c2d12; }
+        .risk-badge.critical { background: #fecaca; color: #7f1d1d; }
+
+        .expert-details {
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+
+        .expert-details div {
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .label {
+            font-weight: 600;
+            color: #666;
+        }
+
+        .value {
+            color: #333;
+        }
+
+        .industry-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            margin-top: 10px;
+        }
+
+        .data-sources {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        .data-sources h4 {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .source {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            padding: 5px 0;
+        }
+
+        .source-status {
+            font-size: 0.8em;
+        }
+
+        .source-status.ok { color: #34a853; }
+        .source-status.failed { color: #d33827; }
+
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 12px;
+            color: #666;
+        }
+
+        .no-results h2 {
+            margin-bottom: 10px;
+        }
+
+        .filter-tag {
+            display: inline-block;
+            background: #1a73e8;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+        }
+
+        .filter-tag .remove {
+            margin-left: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .filter-tags {
+            margin-bottom: 20px;
+        }
+
+        .industry-colors {
+            MDL: #1a73e8;
+            Environmental-Law: #34a853;
+            Financial: #ea8b13;
+            Engineering: #764ba2;
+            Scientific: #d33827;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.8em; }
+            .experts-grid { grid-template-columns: 1fr; }
+            .controls { grid-template-columns: 1fr; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        .score-display {
+            font-size: 2em;
+            font-weight: 700;
+            color: #1a73e8;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 Gatekeeper</h1>
+            <p>Universal Expert Verification Platform</p>
+            <p style="font-size: 0.95em; color: #888;">Comprehensive credential and background verification across 5+ industries</p>
+            <div class="stats">
+                <div class="stat-box">
+                    <h3 id="total-experts">0</h3>
+                    <p>Total Experts</p>
+                </div>
+                <div class="stat-box" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <h3 id="mdl-count">0</h3>
+                    <p>MDL Experts</p>
+                </div>
+                <div class="stat-box" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <h3 id="env-count">0</h3>
+                    <p>Environmental</p>
+                </div>
+                <div class="stat-box" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                    <h3 id="financial-count">0</h3>
+                    <p>Financial</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="search">🔎 Search Expert</label>
+                <input type="text" id="search" placeholder="Name, specialty, or keyword...">
+            </div>
+            <div class="control-group">
+                <label for="industry-filter">🏛️ Filter by Industry</label>
+                <select id="industry-filter">
+                    <option value="">All Industries</option>
+                    <option value="MDL">MDL / Medical</option>
+                    <option value="Environmental Law">Environmental Law</option>
+                    <option value="Financial">Financial</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Scientific">Scientific</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="risk-filter">⚠️ Filter by Risk Level</label>
+                <select id="risk-filter">
+                    <option value="">All Risk Levels</option>
+                    <option value="LOW">LOW</option>
+                    <option value="MEDIUM">MEDIUM</option>
+                    <option value="HIGH">HIGH</option>
+                    <option value="CRITICAL">CRITICAL</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="filter-tags" id="filter-tags"></div>
+
+        <div id="experts-container" class="experts-grid"></div>
+
+        <div class="footer">
+            <p>Gatekeeper — Trusted Expert Verification | Data Updated: <span id="update-time"></span></p>
+            <p style="font-size: 0.9em; margin-top: 10px;">
+                Powered by RetractionWatch, ORCID, NIH Reporter, CrossRef, PubMed, arXiv, USPTO Patents, and State Bar databases
+            </p>
+        </div>
+    </div>
+
+    <script>
+        let allExperts = [];
+        let filteredExperts = [];
+
+        const riskLevels = {
+            'LOW': 0,
+            'MEDIUM': 1,
+            'HIGH': 2,
+            'CRITICAL': 3
+        };
+
+        const industryColors = {
+            'MDL': '#1a73e8',
+            'Environmental Law': '#34a853',
+            'Financial': '#ea8b13',
+            'Engineering': '#764ba2',
+            'Scientific': '#d33827'
+        };
+
+        // Fetch expert data
+        async function loadExperts() {
+            try {
+                const response = await fetch('expert_data.json');
+                allExperts = await response.json();
+                initializeUI();
+                renderExperts();
+            } catch (error) {
+                console.error('Error loading expert data:', error);
+                document.getElementById('experts-container').innerHTML = 
+                    '<div class="no-results"><h2>Error loading data</h2><p>Please ensure expert_data.json is in the same directory</p></div>';
+            }
+        }
+
+        function initializeUI() {
+            // Update statistics
+            document.getElementById('total-experts').textContent = allExperts.length;
+            document.getElementById('mdl-count').textContent = allExperts.filter(e => e.industry === 'MDL').length;
+            document.getElementById('env-count').textContent = allExperts.filter(e => e.industry === 'Environmental Law').length;
+            document.getElementById('financial-count').textContent = allExperts.filter(e => e.industry === 'Financial').length;
+
+            // Set current time
+            document.getElementById('update-time').textContent = new Date().toLocaleString();
+
+            // Add event listeners
+            document.getElementById('search').addEventListener('input', applyFilters);
+            document.getElementById('industry-filter').addEventListener('change', applyFilters);
+            document.getElementById('risk-filter').addEventListener('change', applyFilters);
+        }
+
+        function applyFilters() {
+            const searchTerm = document.getElementById('search').value.toLowerCase();
+            const industryFilter = document.getElementById('industry-filter').value;
+            const riskFilter = document.getElementById('risk-filter').value;
+
+            filteredExperts = allExperts.filter(expert => {
+                const nameMatch = expert.name.toLowerCase().includes(searchTerm);
+                const specialtyMatch = expert.specialty.toLowerCase().includes(searchTerm);
+                const industryMatch = !industryFilter || expert.industry === industryFilter;
+                const riskMatch = !riskFilter || expert.risk_level === riskFilter;
+
+                return (nameMatch || specialtyMatch) && industryMatch && riskMatch;
+            });
+
+            renderExperts();
+            updateFilterTags();
+        }
+
+        function updateFilterTags() {
+            const tagsContainer = document.getElementById('filter-tags');
+            tagsContainer.innerHTML = '';
+
+            const search = document.getElementById('search').value;
+            const industry = document.getElementById('industry-filter').value;
+            const risk = document.getElementById('risk-filter').value;
+
+            if (search) {
+                addFilterTag(`Search: "${search}"`, () => {
+                    document.getElementById('search').value = '';
+                    applyFilters();
+                });
+            }
+
+            if (industry) {
+                addFilterTag(`Industry: ${industry}`, () => {
+                    document.getElementById('industry-filter').value = '';
+                    applyFilters();
+                });
+            }
+
+            if (risk) {
+                addFilterTag(`Risk: ${risk}`, () => {
+                    document.getElementById('risk-filter').value = '';
+                    applyFilters();
+                });
+            }
+        }
+
+        function addFilterTag(text, onRemove) {
+            const tag = document.createElement('span');
+            tag.className = 'filter-tag';
+            tag.innerHTML = `${text} <span class="remove" onclick="event.stopPropagation()">×</span>`;
+            tag.querySelector('.remove').addEventListener('click', onRemove);
+            document.getElementById('filter-tags').appendChild(tag);
+        }
+
+        function renderExperts() {
+            const container = document.getElementById('experts-container');
+            
+            if (filteredExperts.length === 0) {
+                container.innerHTML = '<div class="no-results" style="grid-column: 1/-1;"><h2>No experts found</h2><p>Try adjusting your search or filter criteria</p></div>';
+                return;
+            }
+
+            container.innerHTML = filteredExperts.map((expert, index) => {
+                const riskClass = expert.risk_level.toLowerCase();
+                const industryColor = industryColors[expert.industry] || '#999';
+                
+                return `
+                    <div class="expert-card ${riskClass}">
+                        <div class="expert-header">
+                            <div>
+                                <div class="expert-name">${expert.name}</div>
+                                <span class="risk-badge ${riskClass}">${expert.risk_level}</span>
+                            </div>
+                        </div>
+
+                        <div class="expert-details">
+                            <div>
+                                <span class="label">Risk Score:</span>
+                                <span class="value"><strong>${expert.score}</strong></span>
+                            </div>
+                            <div>
+                                <span class="label">Specialty:</span>
+                                <span class="value">${expert.specialty}</span>
+                            </div>
+                            <div>
+                                <span class="label">Industry:</span>
+                                <span style="color: ${industryColor}; font-weight: 600;">${expert.industry}</span>
+                            </div>
+                        </div>
+
+                        <div class="data-sources">
+                            <h4>Verification Sources</h4>
+                            ${renderDataSources(expert.data)}
+                        </div>
+
+                        <span class="industry-badge" style="background: ${industryColor};">
+                            ${expert.industry}
+                        </span>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function renderDataSources(data) {
+            const sources = [
+                { name: 'RetractionWatch', key: 'retractionwatch' },
+                { name: 'ORCID', key: 'orcid' },
+                { name: 'NIH Reporter', key: 'nih_reporter' },
+                { name: 'CrossRef', key: 'crossref' },
+                { name: 'PubMed', key: 'pubmed' },
+                { name: 'arXiv', key: 'arxiv' },
+                { name: 'USPTO Patents', key: 'uspto_patents' }
+            ];
+
+            return sources.map(source => {
+                const sourceData = data[source.key];
+                const status = sourceData && sourceData.success !== false ? 'ok' : 'failed';
+                const statusText = status === 'ok' ? '✓ Verified' : '⚠ Pending';
+                return `<div class="source">
+                    <span>${source.name}</span>
+                    <span class="source-status ${status}">${statusText}</span>
+                </div>`;
+            }).join('');
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', loadExperts);
+    </script>
+</body>
+</html>

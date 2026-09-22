@@ -1,0 +1,1520 @@
+[
+  {
+    "name": "Dr. Michael Torres",
+    "specialty": "Cardiology",
+    "industry": "MDL",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Dr. Sarah Miller",
+    "specialty": "Biostatistics",
+    "industry": "MDL",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Dr. Robert Chen",
+    "specialty": "Radiology",
+    "industry": "MDL",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Dr. Jennifer Russell",
+    "specialty": "Orthopedic Surgery",
+    "industry": "MDL",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Dr. David Morrison",
+    "specialty": "Oncology",
+    "industry": "MDL",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Dr. Rachel Robinson",
+    "specialty": "Neurology",
+    "industry": "MDL",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Dr. James Raines",
+    "specialty": "Internal Medicine",
+    "industry": "MDL",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Dr. Lisa Lee",
+    "specialty": "Dermatology",
+    "industry": "MDL",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Dr. Christopher Harris",
+    "specialty": "Pathology",
+    "industry": "MDL",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Dr. Patricia Yamamoto",
+    "specialty": "Psychiatry",
+    "industry": "MDL",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Jennifer Walsh, Esq.",
+    "specialty": "Environmental Litigation",
+    "industry": "Environmental Law",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      },
+      "state_bar": {
+        "success": true,
+        "found": true,
+        "status": "Active",
+        "score_impact": -1
+      }
+    }
+  },
+  {
+    "name": "David Nakamura, Esq.",
+    "specialty": "Climate Change Law",
+    "industry": "Environmental Law",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      },
+      "state_bar": {
+        "success": true,
+        "found": true,
+        "status": "Active",
+        "score_impact": -1
+      }
+    }
+  },
+  {
+    "name": "Sarah Anderson, Esq.",
+    "specialty": "Clean Water Act",
+    "industry": "Environmental Law",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      },
+      "state_bar": {
+        "success": true,
+        "found": true,
+        "status": "Active",
+        "score_impact": -1
+      }
+    }
+  },
+  {
+    "name": "Michael Chen, Esq.",
+    "specialty": "CERCLA/Remediation",
+    "industry": "Environmental Law",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      },
+      "state_bar": {
+        "success": true,
+        "found": true,
+        "status": "Active",
+        "score_impact": -1
+      }
+    }
+  },
+  {
+    "name": "Lisa Rodriguez, Esq.",
+    "specialty": "Environmental Compliance",
+    "industry": "Environmental Law",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      },
+      "state_bar": {
+        "success": true,
+        "found": true,
+        "status": "Active",
+        "score_impact": -1
+      }
+    }
+  },
+  {
+    "name": "James Morrison, Esq.",
+    "specialty": "Toxic Tort/Environmental",
+    "industry": "Environmental Law",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      },
+      "state_bar": {
+        "success": true,
+        "found": true,
+        "status": "Active",
+        "score_impact": -1
+      }
+    }
+  },
+  {
+    "name": "Rachel Green, Esq.",
+    "specialty": "Environmental Policy",
+    "industry": "Environmental Law",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      },
+      "state_bar": {
+        "success": true,
+        "found": true,
+        "status": "Active",
+        "score_impact": -1
+      }
+    }
+  },
+  {
+    "name": "Kevin Zhang, Esq.",
+    "specialty": "Air Quality Law",
+    "industry": "Environmental Law",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      },
+      "state_bar": {
+        "success": true,
+        "found": true,
+        "status": "Active",
+        "score_impact": -1
+      }
+    }
+  },
+  {
+    "name": "John Smith, CPA, CFE",
+    "specialty": "Forensic Accounting",
+    "industry": "Financial",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Maria Garcia, CPA, CVA",
+    "specialty": "Valuation",
+    "industry": "Financial",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Robert Johnson, CPA",
+    "specialty": "Fraud Detection",
+    "industry": "Financial",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Lisa Chen, CPA, CFE",
+    "specialty": "Damages Calculation",
+    "industry": "Financial",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Michael Torres, MBA, CFA",
+    "specialty": "Financial Analysis",
+    "industry": "Financial",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Diana Rodriguez, CPA",
+    "specialty": "Expert Witness",
+    "industry": "Financial",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Dr. Alan Park, PE",
+    "specialty": "Civil Engineering",
+    "industry": "Engineering",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Dr. Michelle White, PE",
+    "specialty": "Structural Engineering",
+    "industry": "Engineering",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Dr. James Wilson, PE",
+    "specialty": "Mechanical Engineering",
+    "industry": "Engineering",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Dr. Sofia Martinez, PE",
+    "specialty": "Environmental Engineering",
+    "industry": "Engineering",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Dr. Robert Lee, PE",
+    "specialty": "Product Liability",
+    "industry": "Engineering",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Dr. Karen Davis, PE",
+    "specialty": "Construction Defects",
+    "industry": "Engineering",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Dr. Thomas Anderson",
+    "specialty": "Toxicology",
+    "industry": "Scientific",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Dr. Emily Johnson",
+    "specialty": "Epidemiology",
+    "industry": "Scientific",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Dr. Christopher Blake",
+    "specialty": "Environmental Science",
+    "industry": "Scientific",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Dr. Lisa Wong",
+    "specialty": "Chemistry",
+    "industry": "Scientific",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  },
+  {
+    "name": "Dr. David Meyer",
+    "specialty": "Biology",
+    "industry": "Scientific",
+    "score": 1,
+    "risk_level": "LOW",
+    "data": {
+      "retractionwatch": {
+        "success": false,
+        "error": "No response"
+      },
+      "orcid": {
+        "success": true,
+        "found": false,
+        "score_impact": 1
+      },
+      "nih_reporter": {
+        "success": true,
+        "count": 0,
+        "total_funding": 0,
+        "score_impact": 0
+      },
+      "crossref": {
+        "success": true,
+        "publications": 0,
+        "papers": []
+      },
+      "pubmed": {
+        "success": true,
+        "pubmed_count": 0
+      },
+      "arxiv": {
+        "success": true,
+        "preprint_count": 0
+      },
+      "uspto_patents": {
+        "success": true,
+        "patent_count": 0,
+        "patents": []
+      }
+    }
+  }
+]
