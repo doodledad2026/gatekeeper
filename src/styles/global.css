@@ -1,5 +1,3 @@
-@import "tailwindcss";
-
 @import "@fontsource/space-grotesk/500.css";
 @import "@fontsource/space-grotesk/700.css";
 @import "@fontsource/ibm-plex-sans/400.css";
@@ -8,72 +6,150 @@
 @import "@fontsource/ibm-plex-mono/400.css";
 @import "@fontsource/ibm-plex-mono/500.css";
 
-@layer theme {
-  :root {
-    --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
-    --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
-    --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+:root {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
 
-    /* Legal Navy & Justice Gold palette from Expert Edge logo. */
-    --color-ink: #edeff2;
-    --color-ink-soft: #8b94a2;
-    --color-paper: #0f1419;
-    --color-paper-alt: #161b24;
-    --color-panel: #0a0e13;
-    --color-line: #ffffff1f;
-    --color-signal: #c4a77d;
-    --color-signal-soft: #3a3420;
-    --color-navy: #001f5b;
+  /* Legal Navy & Justice Gold palette */
+  --color-navy: #001F5B;
+  --color-gold: #C4A77D;
+  --color-white: #FFFFFF;
+  --color-text: #606060;
+  --color-sand: #E8E8E8;
+  --color-light-bg: #F5F5F5;
+}
 
-    --color-risk-low: #57b487;
-    --color-risk-medium: #d7a24a;
-    --color-risk-high: #e08a4c;
-    --color-risk-critical: #e5677a;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   font-family: var(--font-body);
-  background: var(--color-paper);
-  color: var(--color-ink);
-  scroll-behavior: smooth;
+  background: var(--color-white);
+  color: var(--color-text);
+  line-height: 1.6;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+body {
+  background: var(--color-white);
+  color: var(--color-text);
 }
 
-::selection {
-  background: var(--color-signal);
-  color: var(--color-paper);
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--color-navy);
+  font-weight: 700;
+  line-height: 1.2;
 }
 
-.container-edge {
-  max-width: 76rem;
-  margin-inline: auto;
-  padding-inline: 1.25rem;
+h1 { font-size: 3rem; }
+h2 { font-size: 2.25rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
-@media (min-width: 768px) {
-  .container-edge {
-    padding-inline: 2rem;
-  }
+a {
+  color: var(--color-navy);
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+a:hover {
+  color: var(--color-gold);
 }
 
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
+button {
+  font-family: var(--font-body);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.container-sm {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Utility classes */
+.flex { display: flex; }
+.grid { display: grid; }
+.gap-1 { gap: 1rem; }
+.gap-2 { gap: 2rem; }
+.gap-3 { gap: 3rem; }
+.gap-4 { gap: 4rem; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+
+.py-4 { padding: 2rem 0; }
+.py-8 { padding: 4rem 0; }
+.py-12 { padding: 6rem 0; }
+.py-16 { padding: 8rem 0; }
+
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-8 { margin-bottom: 2rem; }
+
+.text-center { text-align: center; }
+.text-navy { color: var(--color-navy); }
+.text-gold { color: var(--color-gold); }
+.text-light { color: #999; }
+
+.bg-navy { background: var(--color-navy); color: var(--color-white); }
+.bg-light { background: var(--color-light-bg); }
+.bg-sand { background: var(--color-sand); }
+
+.border-bottom { border-bottom: 1px solid var(--color-sand); }
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--color-gold);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background: #b39568;
+}
+
+.btn-secondary {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+.btn-secondary:hover {
+  background: #001244;
+}
+
+.btn-outline {
+  border: 2px solid var(--color-navy);
+  color: var(--color-navy);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--color-navy);
+  color: var(--color-white);
 }
