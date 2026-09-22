@@ -1,0 +1,120 @@
+---
+import Logo from "./Logo.astro";
+import IconMenu from "./icons/IconMenu.astro";
+import IconClose from "./icons/IconClose.astro";
+
+const links = [
+  { href: "#index", label: "Index" },
+  { href: "#coverage", label: "Coverage" },
+  { href: "#sources", label: "Sources" },
+  { href: "#directory", label: "Directory" },
+  { href: "#deploy", label: "Deploy" },
+];
+---
+<header class="sticky top-0 z-50 border-b border-line bg-paper">
+  <div class="container-edge flex h-16 items-center justify-between">
+    <a href="#top" class="flex items-center gap-2.5">
+      <Logo class="size-7 text-ink" />
+      <span class="font-display text-base font-bold tracking-tight uppercase">Gatekeeper</span>
+    </a>
+
+    <nav class="hidden items-center gap-1 md:flex" aria-label="Primary">
+      {links.map((link) => (
+        <a
+          href={link.href}
+          data-nav-link
+          class="rounded-none px-3 py-2 font-mono text-xs tracking-wider text-ink-soft uppercase transition-colors hover:text-ink data-[active=true]:text-signal"
+        >
+          {link.label}
+        </a>
+      ))}
+      <a
+        href="#directory"
+        class="ml-2 border border-ink bg-ink px-4 py-2 font-mono text-xs tracking-wider text-paper uppercase transition-colors hover:bg-signal hover:border-signal"
+      >
+        Search
+      </a>
+    </nav>
+
+    <button
+      id="nav-toggle"
+      type="button"
+      class="flex items-center justify-center border border-line p-2 text-ink md:hidden"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="mobile-nav"
+    >
+      <IconMenu class="size-5" data-icon="open" />
+      <IconClose class="hidden size-5" data-icon="close" />
+    </button>
+  </div>
+
+  <nav
+    id="mobile-nav"
+    class="hidden border-t border-line bg-paper md:hidden"
+    aria-label="Mobile"
+  >
+    <ul class="container-edge flex flex-col py-2">
+      {links.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            data-nav-link
+            data-mobile-link
+            class="block border-b border-line/70 py-3 font-mono text-sm tracking-wider text-ink-soft uppercase last:border-none"
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.getElementById("nav-toggle");
+  const mobileNav = document.getElementById("mobile-nav");
+  const openIcon = toggle?.querySelector('[data-icon="open"]');
+  const closeIcon = toggle?.querySelector('[data-icon="close"]');
+
+  function setOpen(open: boolean) {
+    if (!mobileNav || !toggle) return;
+    mobileNav.classList.toggle("hidden", !open);
+    toggle.setAttribute("aria-expanded", String(open));
+    openIcon?.classList.toggle("hidden", open);
+    closeIcon?.classList.toggle("hidden", !open);
+  }
+
+  toggle?.addEventListener("click", () => {
+    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+    setOpen(!isOpen);
+  });
+
+  document.querySelectorAll("[data-mobile-link]").forEach((link) => {
+    link.addEventListener("click", () => setOpen(false));
+  });
+
+  const sections = Array.from(document.querySelectorAll("[data-nav-link]"))
+    .map((a) => a.getAttribute("href"))
+    .filter((href, index, arr) => href && arr.indexOf(href) === index)
+    .map((href) => document.querySelector(href as string))
+    .filter((el): el is HTMLElement => !!el);
+
+  const navLinks = document.querySelectorAll("[data-nav-link]");
+
+  const spy = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = `#${entry.target.id}`;
+          navLinks.forEach((link) => {
+            link.setAttribute("data-active", String(link.getAttribute("href") === id));
+          });
+        }
+      });
+    },
+    { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+  );
+
+  sections.forEach((section) => spy.observe(section));
+</script>

@@ -1,0 +1,39 @@
+---
+import { dataSources } from "../data/site";
+---
+<section id="sources" class="border-b border-line">
+  <div class="container-edge py-16 md:py-24">
+    <div class="mb-12 max-w-xl">
+      <p class="mb-3 font-mono text-xs tracking-widest text-signal uppercase">[ 03 / Sources ]</p>
+      <h2 class="font-display text-3xl font-bold tracking-tight sm:text-4xl">
+        Checked against eight public registries.
+      </h2>
+      <p class="mt-4 text-sm leading-relaxed text-ink-soft">
+        No scraping, no paid data brokers — official registries only.
+      </p>
+    </div>
+
+    <table class="w-full border-t border-line text-left">
+      <thead>
+        <tr class="border-b border-line">
+          <th scope="col" class="py-3 font-mono text-xs tracking-widest text-ink-soft uppercase">Registry</th>
+          <th scope="col" class="hidden py-3 font-mono text-xs tracking-widest text-ink-soft uppercase sm:table-cell">Coverage</th>
+          <th scope="col" class="py-3 text-right font-mono text-xs tracking-widest text-ink-soft uppercase">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {dataSources.map((source) => (
+          <tr class="reveal border-b border-line">
+            <td class="py-4 font-display text-sm font-bold sm:text-base">{source.name}</td>
+            <td class="hidden py-4 text-sm text-ink-soft sm:table-cell">{source.detail}</td>
+            <td class="py-4 text-right">
+              <span class="border border-risk-low/40 px-2 py-1 font-mono text-[11px] tracking-wider text-risk-low uppercase">
+                Live
+              </span>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</section>

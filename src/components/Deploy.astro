@@ -1,0 +1,29 @@
+---
+import { deploySteps } from "../data/site";
+---
+<section id="deploy" class="border-b border-line">
+  <div class="container-edge py-16 md:py-24">
+    <div class="mb-12 max-w-xl">
+      <p class="mb-3 font-mono text-xs tracking-widest text-signal uppercase">[ 05 / Deploy ]</p>
+      <h2 class="font-display text-3xl font-bold tracking-tight sm:text-4xl">
+        Run your own instance.
+      </h2>
+      <p class="mt-4 text-sm leading-relaxed text-ink-soft">
+        Static output, no server, no CMS. Live on Cloudflare Pages in minutes.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 border-t border-l border-line md:grid-cols-3">
+      {deploySteps.map((step) => (
+        <div class="reveal border-r border-b border-line p-6">
+          <div class="flex items-baseline justify-between">
+            <span class="font-mono text-xs text-ink-soft">{step.code}</span>
+          </div>
+          <h3 class="mt-3 font-display text-lg font-bold">{step.title}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-ink-soft">{step.description}</p>
+          <pre class="mt-4 overflow-x-auto border border-ink bg-ink p-3 font-mono text-xs leading-relaxed text-paper"><code>{step.command}</code></pre>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,40 @@
+---
+import { indexEntries } from "../data/site";
+import IconSearch from "./icons/IconSearch.astro";
+import IconAlert from "./icons/IconAlert.astro";
+import IconLink from "./icons/IconLink.astro";
+import IconDevice from "./icons/IconDevice.astro";
+
+const icons = {
+  search: IconSearch,
+  alert: IconAlert,
+  link: IconLink,
+  device: IconDevice,
+};
+---
+<section id="index" class="border-b border-line">
+  <div class="container-edge py-16 md:py-24">
+    <div class="mb-12 max-w-xl">
+      <p class="mb-3 font-mono text-xs tracking-widest text-signal uppercase">[ 01 / Platform ]</p>
+      <h2 class="font-display text-3xl font-bold tracking-tight sm:text-4xl">
+        Everything needed to vet a record.
+      </h2>
+    </div>
+
+    <div class="border-t border-line">
+      {indexEntries.map((entry) => {
+        const Icon = icons[entry.icon as keyof typeof icons];
+        return (
+          <div class="reveal grid grid-cols-1 gap-4 border-b border-line py-8 sm:grid-cols-12 sm:items-start sm:gap-6">
+            <span class="font-mono text-sm text-ink-soft sm:col-span-1">{entry.code}</span>
+            <div class="sm:col-span-2">
+              <Icon class="size-6 text-signal" />
+            </div>
+            <h3 class="font-display text-lg font-bold sm:col-span-3">{entry.title}</h3>
+            <p class="text-sm leading-relaxed text-ink-soft sm:col-span-6">{entry.description}</p>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>

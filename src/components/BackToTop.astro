@@ -1,0 +1,17 @@
+---
+import IconArrowUp from "./icons/IconArrowUp.astro";
+---
+<button
+  id="back-to-top"
+  type="button"
+  aria-label="Back to top"
+  class="fixed right-5 bottom-5 z-40 flex size-11 items-center justify-center border border-ink bg-paper text-ink opacity-0 transition-opacity duration-200 hover:bg-ink hover:text-paper"
+>
+  <IconArrowUp class="size-4" />
+</button>
+
+<script>
+  import { initReveal, initBackToTop } from "../scripts/interactions";
+  initReveal();
+  initBackToTop();
+</script>

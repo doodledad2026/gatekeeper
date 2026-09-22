@@ -1,0 +1,32 @@
+---
+import { industries } from "../data/site";
+---
+<section id="coverage" class="border-b border-line bg-paper-alt">
+  <div class="container-edge py-16 md:py-24">
+    <div class="mb-12 max-w-xl">
+      <p class="mb-3 font-mono text-xs tracking-widest text-signal uppercase">[ 02 / Coverage ]</p>
+      <h2 class="font-display text-3xl font-bold tracking-tight sm:text-4xl">
+        Five industries, one standard.
+      </h2>
+      <p class="mt-4 text-sm leading-relaxed text-ink-soft">
+        The scoring model adapts to the credentials that matter in each field —
+        but every record is held to the same bar.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 border-t border-l border-line sm:grid-cols-2 lg:grid-cols-5">
+      {industries.map((industry) => (
+        <div class="reveal border-r border-b border-line p-6">
+          <div class="flex items-baseline justify-between">
+            <span class="font-mono text-xs text-ink-soft">{industry.code}</span>
+            <span class="font-display text-3xl font-bold tabular-nums">
+              {String(industry.count).padStart(2, "0")}
+            </span>
+          </div>
+          <h3 class="mt-4 font-display text-base font-bold">{industry.name}</h3>
+          <p class="mt-2 text-xs leading-relaxed text-ink-soft">{industry.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import Hero from "../components/Hero.astro";
+import IndexSection from "../components/IndexSection.astro";
+import Coverage from "../components/Coverage.astro";
+import Sources from "../components/Sources.astro";
+import Directory from "../components/Directory.astro";
+import Deploy from "../components/Deploy.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import BackToTop from "../components/BackToTop.astro";
+---
+<BaseLayout>
+  <SiteHeader />
+  <main>
+    <Hero />
+    <IndexSection />
+    <Coverage />
+    <Sources />
+    <Directory />
+    <Deploy />
+  </main>
+  <SiteFooter />
+  <BackToTop />
+</BaseLayout>
