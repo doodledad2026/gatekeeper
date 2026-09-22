@@ -1,5 +1,3 @@
-@import "tailwindcss";
-
 @import "@fontsource/space-grotesk/500.css";
 @import "@fontsource/space-grotesk/700.css";
 @import "@fontsource/ibm-plex-sans/400.css";
@@ -7,29 +5,27 @@
 @import "@fontsource/ibm-plex-sans/600.css";
 @import "@fontsource/ibm-plex-mono/400.css";
 @import "@fontsource/ibm-plex-mono/500.css";
+@import "./utilities.css";
 
-@layer theme {
-  :root {
-    --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
-    --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
-    --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+:root {
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
 
-    /* Legal Navy & Justice Gold palette from Expert Edge logo. */
-    --color-ink: #edeff2;
-    --color-ink-soft: #8b94a2;
-    --color-paper: #0f1419;
-    --color-paper-alt: #161b24;
-    --color-panel: #0a0e13;
-    --color-line: #ffffff1f;
-    --color-signal: #c4a77d;
-    --color-signal-soft: #3a3420;
-    --color-navy: #001f5b;
+  --color-ink: #edeff2;
+  --color-ink-soft: #8b94a2;
+  --color-paper: #0f1419;
+  --color-paper-alt: #161b24;
+  --color-panel: #0a0e13;
+  --color-line: #ffffff1f;
+  --color-signal: #c4a77d;
+  --color-signal-soft: #3a3420;
+  --color-navy: #001f5b;
 
-    --color-risk-low: #57b487;
-    --color-risk-medium: #d7a24a;
-    --color-risk-high: #e08a4c;
-    --color-risk-critical: #e5677a;
-  }
+  --color-risk-low: #57b487;
+  --color-risk-medium: #d7a24a;
+  --color-risk-high: #e08a4c;
+  --color-risk-critical: #e5677a;
 }
 
 html {
