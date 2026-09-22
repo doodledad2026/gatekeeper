@@ -1,0 +1,759 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import expertData from '../../expert_data.json';
+---
+
+<BaseLayout title="Expert Directory — Expert Edge" description="Search and verify experts across 35 verified professionals with comprehensive risk assessments.">
+  <SiteHeader />
+
+  <main>
+    <!-- Directory Hero Section -->
+    <section class="directory-hero">
+      <div class="container">
+        <div class="section-header">
+          <h1>Expert Directory</h1>
+          <p>Search 35 verified experts across multiple specialties and industries.</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-box">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by name, specialty, or industry..."
+            class="search-input"
+            autocomplete="off"
+          />
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+        </div>
+
+        <!-- Filter Options -->
+        <div class="filter-bar">
+          <div class="filter-group">
+            <label for="specialtyFilter">Specialty:</label>
+            <select id="specialtyFilter" class="filter-select">
+              <option value="">All Specialties</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="riskFilter">Risk Level:</label>
+            <select id="riskFilter" class="filter-select">
+              <option value="">All Risk Levels</option>
+              <option value="LOW">Low Risk</option>
+              <option value="MEDIUM">Medium Risk</option>
+              <option value="HIGH">High Risk</option>
+            </select>
+          </div>
+          <button id="resetFilters" class="btn-reset">Reset Filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+      <div class="container">
+        <div class="results-header">
+          <p id="resultsCount" class="results-count">Showing 35 experts</p>
+        </div>
+
+        <div id="expertsList" class="experts-grid">
+          {expertData.map((expert) => (
+            <a href={`/expert/${expert.name.replace(/\s+/g, '-').toLowerCase()}`} class="expert-card">
+              <div class="expert-header">
+                <h3>{expert.name}</h3>
+                <span class={`risk-badge risk-${expert.risk_level.toLowerCase()}`}>
+                  {expert.risk_level}
+                </span>
+              </div>
+
+              <div class="expert-info">
+                <div class="info-item">
+                  <span class="info-label">Specialty</span>
+                  <span class="info-value">{expert.specialty}</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Industry</span>
+                  <span class="info-value">{expert.industry}</span>
+                </div>
+              </div>
+
+              {expert.dossier.academic && (
+                <div class="expert-stats">
+                  <div class="stat">
+                    <span class="stat-label">H-Index</span>
+                    <span class="stat-value">{expert.dossier.academic.h_index}</span>
+                  </div>
+                  <div class="stat">
+                    <span class="stat-label">Citations</span>
+                    <span class="stat-value">{expert.dossier.academic.citations}</span>
+                  </div>
+                  {expert.dossier.funding && (
+                    <div class="stat">
+                      <span class="stat-label">Funding</span>
+                      <span class="stat-value">${(expert.dossier.funding.amount / 1000).toFixed(0)}K</span>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {expert.flags.length > 0 && (
+                <div class="expert-flags">
+                  {expert.flags.map((flag) => (
+                    <span class="flag">{flag}</span>
+                  ))}
+                </div>
+              )}
+
+              <div class="card-footer">
+                <span class="view-link">View Dossier →</span>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        <div id="noResults" class="no-results" style="display: none;">
+          <p>No experts match your search criteria.</p>
+          <button id="clearSearch" class="btn btn-outline">Clear Filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="cta-background">
+        <div class="gradient-orb orb-3"></div>
+      </div>
+
+      <div class="container cta-content">
+        <h2>Find the Right Expert</h2>
+        <p>Comprehensive verification data for 35 verified professionals across multiple disciplines.</p>
+        <a href="/pricing" class="btn btn-primary btn-lg">
+          <span>View Pricing</span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Expert Edge</h4>
+          <p>Professional expert verification platform for legal professionals.</p>
+        </div>
+        <div>
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="/directory">Expert Directory</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#privacy">Privacy</a></li>
+            <li><a href="#terms">Terms</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Expert Edge. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Directory Hero */
+    .directory-hero {
+      padding: 6rem 0 4rem;
+      background: linear-gradient(180deg, #F5F5F5, white);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-header h1 {
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      color: #001F5B;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .section-header p {
+      font-size: 1.1rem;
+      color: #606060;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Search Box */
+    .search-box {
+      position: relative;
+      max-width: 600px;
+      margin: 2rem auto 0;
+      animation: slideInUp 0.6s ease-out;
+    }
+
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 1rem 1rem 1rem 3rem;
+      font-size: 1rem;
+      border: 2px solid #E8E8E8;
+      border-radius: 8px;
+      font-family: inherit;
+      transition: all 0.3s ease;
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: #C4A77D;
+      box-shadow: 0 10px 30px rgba(196, 167, 125, 0.1);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      color: #C4A77D;
+      pointer-events: none;
+    }
+
+    /* Filter Bar */
+    .filter-bar {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(196, 167, 125, 0.2);
+    }
+
+    .filter-group {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .filter-group label {
+      font-weight: 600;
+      color: #001F5B;
+      font-size: 0.9rem;
+    }
+
+    .filter-select {
+      padding: 0.5rem 1rem;
+      border: 1px solid #E8E8E8;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-family: inherit;
+      background: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .filter-select:focus {
+      outline: none;
+      border-color: #C4A77D;
+      box-shadow: 0 4px 12px rgba(196, 167, 125, 0.1);
+    }
+
+    .btn-reset {
+      padding: 0.5rem 1.5rem;
+      background: transparent;
+      color: #C4A77D;
+      border: 2px solid #C4A77D;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+      font-family: inherit;
+      transition: all 0.3s ease;
+    }
+
+    .btn-reset:hover {
+      background: #C4A77D;
+      color: white;
+    }
+
+    /* Results Section */
+    .results-section {
+      padding: 4rem 0 6rem;
+      background: white;
+    }
+
+    .results-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .results-count {
+      color: #606060;
+      font-size: 0.95rem;
+    }
+
+    /* Experts Grid */
+    .experts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .expert-card {
+      display: flex;
+      flex-direction: column;
+      background: white;
+      border: 1px solid rgba(196, 167, 125, 0.2);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      animation: slideInUp 0.6s ease-out backwards;
+    }
+
+    .expert-card:hover {
+      border-color: #C4A77D;
+      box-shadow: 0 20px 40px rgba(196, 167, 125, 0.1);
+      transform: translateY(-5px);
+    }
+
+    .expert-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+      gap: 1rem;
+    }
+
+    .expert-header h3 {
+      color: #001F5B;
+      font-size: 1.25rem;
+      margin: 0;
+      flex: 1;
+    }
+
+    .risk-badge {
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+    }
+
+    .risk-low {
+      background: rgba(87, 180, 135, 0.15);
+      color: #57b487;
+    }
+
+    .risk-medium {
+      background: rgba(215, 162, 74, 0.15);
+      color: #d7a24a;
+    }
+
+    .risk-high {
+      background: rgba(229, 103, 122, 0.15);
+      color: #e5677a;
+    }
+
+    .expert-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(196, 167, 125, 0.1);
+    }
+
+    .info-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .info-label {
+      font-size: 0.8rem;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .info-value {
+      color: #001F5B;
+      font-weight: 600;
+    }
+
+    /* Expert Stats */
+    .expert-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(196, 167, 125, 0.1);
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-label {
+      display: block;
+      font-size: 0.75rem;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-value {
+      display: block;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #C4A77D;
+    }
+
+    /* Flags */
+    .expert-flags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .flag {
+      display: inline-block;
+      padding: 0.4rem 0.8rem;
+      background: #e5677a;
+      color: white;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    /* Card Footer */
+    .card-footer {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(196, 167, 125, 0.1);
+    }
+
+    .view-link {
+      color: #C4A77D;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: transform 0.3s ease;
+    }
+
+    .expert-card:hover .view-link {
+      transform: translateX(4px);
+    }
+
+    /* No Results */
+    .no-results {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .no-results p {
+      font-size: 1.1rem;
+      color: #606060;
+      margin-bottom: 2rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      text-decoration: none;
+      font-family: inherit;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #001F5B;
+      border: 2px solid #001F5B;
+    }
+
+    .btn-outline:hover {
+      background: #001F5B;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #C4A77D, #b39568);
+      color: white;
+      box-shadow: 0 10px 30px rgba(196, 167, 125, 0.2);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 40px rgba(196, 167, 125, 0.3);
+    }
+
+    .btn-lg {
+      padding: 1.25rem 2.5rem;
+      font-size: 1.05rem;
+    }
+
+    .arrow {
+      transition: transform 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn:hover .arrow {
+      transform: translateX(4px);
+    }
+
+    /* CTA Section */
+    .cta-section {
+      position: relative;
+      padding: 6rem 0;
+      color: white;
+      overflow: hidden;
+    }
+
+    .cta-background {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #001F5B 0%, #003A8A 100%);
+      z-index: 0;
+    }
+
+    .gradient-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.1;
+    }
+
+    .orb-3 {
+      width: 600px;
+      height: 600px;
+      background: #C4A77D;
+      top: -300px;
+      left: -300px;
+      animation: float 12s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(30px, -30px); }
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .cta-section p {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 2rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Footer */
+    .footer {
+      background: #001F5B;
+      color: white;
+      padding: 3rem 0 1.5rem;
+      border-top: 3px solid #C4A77D;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-grid h4 {
+      color: #C4A77D;
+      margin-bottom: 1rem;
+    }
+
+    .footer-grid p {
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+    }
+
+    .footer-grid ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-grid li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-grid a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-grid a:hover {
+      color: #C4A77D;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    @media (max-width: 768px) {
+      .experts-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .expert-stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .filter-group {
+        justify-content: space-between;
+      }
+
+      .filter-select {
+        flex: 1;
+      }
+    }
+  </style>
+
+  <script>
+    // Populate specialty filter
+    const specialtyFilter = document.getElementById('specialtyFilter');
+    const uniqueSpecialties = [...new Set(expertData.map(e => e.specialty))].sort();
+    uniqueSpecialties.forEach(specialty => {
+      const option = document.createElement('option');
+      option.value = specialty;
+      option.textContent = specialty;
+      specialtyFilter.appendChild(option);
+    });
+
+    // Search and filter functionality
+    const searchInput = document.getElementById('searchInput');
+    const specialtySelect = document.getElementById('specialtyFilter');
+    const riskSelect = document.getElementById('riskFilter');
+    const expertsList = document.getElementById('expertsList');
+    const noResults = document.getElementById('noResults');
+    const resultsCount = document.getElementById('resultsCount');
+    const resetBtn = document.getElementById('resetFilters');
+    const clearSearchBtn = document.getElementById('clearSearch');
+
+    function filterExperts() {
+      const searchTerm = searchInput.value.toLowerCase();
+      const selectedSpecialty = specialtySelect.value;
+      const selectedRisk = riskSelect.value;
+
+      const cards = expertsList.querySelectorAll('.expert-card');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const name = card.querySelector('h3').textContent.toLowerCase();
+        const specialty = card.querySelector('.info-value')?.textContent || '';
+        const industry = card.querySelector('.expert-info .info-value:last-child')?.textContent || '';
+        const riskLevel = card.querySelector('[class*="risk-"]').textContent.trim();
+
+        const matchesSearch = name.includes(searchTerm) ||
+                            specialty.toLowerCase().includes(searchTerm) ||
+                            industry.toLowerCase().includes(searchTerm);
+        const matchesSpecialty = !selectedSpecialty || specialty === selectedSpecialty;
+        const matchesRisk = !selectedRisk || riskLevel === selectedRisk;
+
+        const shouldShow = matchesSearch && matchesSpecialty && matchesRisk;
+        card.style.display = shouldShow ? '' : 'none';
+        if (shouldShow) visibleCount++;
+      });
+
+      const hasResults = visibleCount > 0;
+      expertsList.style.display = hasResults ? 'grid' : 'none';
+      noResults.style.display = hasResults ? 'none' : 'block';
+      resultsCount.textContent = `Showing ${visibleCount} expert${visibleCount !== 1 ? 's' : ''}`;
+    }
+
+    searchInput.addEventListener('input', filterExperts);
+    specialtySelect.addEventListener('change', filterExperts);
+    riskSelect.addEventListener('change', filterExperts);
+
+    resetBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      specialtySelect.value = '';
+      riskSelect.value = '';
+      filterExperts();
+    });
+
+    clearSearchBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      specialtySelect.value = '';
+      riskSelect.value = '';
+      filterExperts();
+    });
+  </script>
+</BaseLayout>

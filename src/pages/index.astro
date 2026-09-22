@@ -3,11 +3,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 ---
 
-<BaseLayout title="Expert Edge — Expert Verification System" description="Verify expert witnesses and consultants against public records.">
+<BaseLayout title="Expert Edge — Verify Experts Instantly" description="Cross-check expert witnesses and consultants against 8 public registries. Get defensible risk scores in seconds.">
   <SiteHeader />
 
   <main>
-    <!-- Hero Section with Gradient -->
+    <!-- Hero Section with Professional Logo -->
     <section class="hero">
       <div class="hero-background">
         <div class="gradient-orb orb-1"></div>
@@ -16,42 +16,46 @@ import SiteHeader from "../components/SiteHeader.astro";
       </div>
       
       <div class="container hero-content">
-        <div class="hero-logo-wrapper">
-          <div class="logo-container">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="hero-logo">
-              <!-- Shield -->
-              <path d="M100 20 L140 40 L140 90 C140 130 100 160 100 160 C100 160 60 130 60 90 L60 40 Z" fill="none" stroke="#001F5B" stroke-width="4" stroke-linejoin="round"/>
-              
-              <!-- Lightning bolt checkmark in gold -->
-              <g>
-                <path d="M85 70 L75 95 L85 95 L75 130" stroke="#C4A77D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <path d="M95 95 L110 75 L125 95" stroke="#C4A77D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-              </g>
-            </svg>
-          </div>
+        <div class="logo-showcase">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="hero-logo">
+            <defs>
+              <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#001F5B;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#003A8A;stop-opacity:1" />
+              </linearGradient>
+              <filter id="shadow">
+                <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.2"/>
+              </filter>
+            </defs>
+            <path d="M100 15 C100 15 60 35 60 85 C60 135 100 165 100 165 C100 165 140 135 140 85 C140 35 100 15 100 15 Z" fill="url(#shieldGrad)" filter="url(#shadow)"/>
+            <path d="M100 20 C100 20 65 38 65 85 C65 130 100 158 100 158 C100 158 135 130 135 85 C135 38 100 20 100 20 Z" fill="none" stroke="#C4A77D" stroke-width="2" opacity="0.6"/>
+            <path d="M80 95 Q85 110 92 118" stroke="#C4A77D" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <path d="M92 118 Q110 90 125 65" stroke="#C4A77D" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <line x1="100" y1="15" x2="100" y2="165" stroke="#C4A77D" stroke-width="1" opacity="0.3"/>
+          </svg>
         </div>
 
-        <h1 class="hero-title">
-          <span class="text-gradient">Verify Experts</span><br/>
-          <span class="text-highlight">Instantly</span>
-        </h1>
-        
+        <h1 class="hero-title">Verify Experts Instantly</h1>
         <p class="hero-subtitle">
-          Cross-check expert witnesses against 8 public registries in seconds. 
-          Get defensible risk scores backed by data.
+          Cross-check expert witnesses and consultants against 8 authoritative public registries. 
+          Get defensible risk scores in seconds, not days.
         </p>
 
         <div class="hero-ctas">
-          <a href="#get-started" class="btn btn-primary btn-lg">
-            <span>Get Free Access</span>
+          <a href="/directory" class="btn btn-primary btn-lg">
+            <span>Search Experts</span>
             <span class="arrow">→</span>
           </a>
-          <a href="#learn-more" class="btn btn-secondary btn-lg">
-            <span>See How It Works</span>
+          <a href="/about" class="btn btn-secondary btn-lg">
+            <span>Learn More</span>
           </a>
         </div>
 
         <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-number">35</div>
+            <div class="stat-label">Experts Verified</div>
+          </div>
           <div class="stat">
             <div class="stat-number">8</div>
             <div class="stat-label">Data Sources</div>
@@ -60,171 +64,86 @@ import SiteHeader from "../components/SiteHeader.astro";
             <div class="stat-number">&lt;2s</div>
             <div class="stat-label">Verification Time</div>
           </div>
-          <div class="stat">
-            <div class="stat-number">100%</div>
-            <div class="stat-label">Public Records</div>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
+    <!-- Value Section -->
+    <section class="value-section">
       <div class="container">
         <div class="section-header">
-          <h2>Powerful Verification Features</h2>
-          <p>Everything you need to vet experts with confidence</p>
+          <h2>Why Expert Verification Matters</h2>
+          <p>In litigation, expert credibility is everything. One discovery surprise can derail your case.</p>
         </div>
 
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">⚡</div>
-            <h3>Lightning Fast</h3>
-            <p>Results in seconds, not days. Simultaneous searches across all registries.</p>
-            <div class="feature-accent"></div>
+        <div class="value-grid">
+          <div class="value-card">
+            <div class="value-icon">⚠️</div>
+            <h3>Hidden Red Flags</h3>
+            <p>Retracted publications, funding conflicts, and disciplinary records often go unnoticed until deposition.</p>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">🔍</div>
-            <h3>Comprehensive</h3>
-            <p>Publications, retractions, funding, patents, licenses, and disciplinary records.</p>
-            <div class="feature-accent"></div>
+          <div class="value-card">
+            <div class="value-icon">🎯</div>
+            <h3>Faster Vetting</h3>
+            <p>Manual research takes hours. Expert Edge delivers comprehensive verification in seconds.</p>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">📊</div>
-            <h3>Risk Scoring</h3>
-            <p>Automated analysis with defensible risk scores and detailed documentation.</p>
-            <div class="feature-accent"></div>
+          <div class="value-card">
+            <div class="value-icon">📋</div>
+            <h3>Defensible Documentation</h3>
+            <p>Every finding is sourced and cited. Your risk assessment stands up to scrutiny.</p>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">🔐</div>
-            <h3>Secure & Private</h3>
-            <p>Enterprise-grade encryption. Your searches and reports stay confidential.</p>
-            <div class="feature-accent"></div>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon">📈</div>
-            <h3>Always Updated</h3>
-            <p>Data refreshes daily from live sources. Never outdated information.</p>
-            <div class="feature-accent"></div>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon">✓</div>
-            <h3>Fully Sourced</h3>
-            <p>See exactly which registries confirmed each credential. Complete transparency.</p>
-            <div class="feature-accent"></div>
+          <div class="value-card">
+            <div class="value-icon">🔒</div>
+            <h3>Confidence in Decisions</h3>
+            <p>Make informed expert selection with complete, verified background information.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- How It Works Section -->
-    <section id="how-it-works" class="how-it-works">
+    <section class="how-it-works">
       <div class="container">
         <div class="section-header">
-          <h2>How It Works</h2>
-          <p>Three simple steps to expert verification</p>
+          <h2>Three Steps to Expert Verification</h2>
         </div>
 
         <div class="steps-container">
           <div class="step-card">
             <div class="step-number">01</div>
-            <div class="step-content">
-              <h3>Search</h3>
-              <p>Enter the expert's name or credentials. Our system instantly searches across all major public registries simultaneously.</p>
-            </div>
-            <div class="step-line"></div>
+            <h3>Search</h3>
+            <p>Enter an expert's name. Our system instantly queries 8 major public registries simultaneously.</p>
           </div>
 
           <div class="step-card">
             <div class="step-number">02</div>
-            <div class="step-content">
-              <h3>Analyze</h3>
-              <p>Cross-reference results against publications, funding, licenses, and disciplinary records with precision scoring.</p>
-            </div>
-            <div class="step-line"></div>
+            <h3>Analyze</h3>
+            <p>View complete dossier with publications, funding, licenses, patents, and disciplinary records.</p>
           </div>
 
           <div class="step-card">
             <div class="step-number">03</div>
-            <div class="step-content">
-              <h3>Decide</h3>
-              <p>Get a defensible risk score with full documentation and source verification for confident decision-making.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Data Sources Section -->
-    <section class="data-sources">
-      <div class="container">
-        <div class="section-header">
-          <h2>Verified Against 8 Major Registries</h2>
-          <p>Only official public sources. No data brokers or scraping.</p>
-        </div>
-
-        <div class="sources-grid">
-          <div class="source-item">
-            <div class="source-icon">📰</div>
-            <div class="source-name">PubMed</div>
-            <div class="source-desc">Medical & Research Publications</div>
-          </div>
-          <div class="source-item">
-            <div class="source-icon">👤</div>
-            <div class="source-name">ORCID</div>
-            <div class="source-desc">Researcher Identity & History</div>
-          </div>
-          <div class="source-item">
-            <div class="source-icon">💰</div>
-            <div class="source-name">NIH Reporter</div>
-            <div class="source-desc">Federal Research Funding</div>
-          </div>
-          <div class="source-item">
-            <div class="source-icon">🔗</div>
-            <div class="source-name">CrossRef</div>
-            <div class="source-desc">Publication Metadata</div>
-          </div>
-          <div class="source-item">
-            <div class="source-icon">⚠️</div>
-            <div class="source-name">RetractionWatch</div>
-            <div class="source-desc">Retracted Publications</div>
-          </div>
-          <div class="source-item">
-            <div class="source-icon">📜</div>
-            <div class="source-name">USPTO Patents</div>
-            <div class="source-desc">Patent Records & Citations</div>
-          </div>
-          <div class="source-item">
-            <div class="source-icon">⚖️</div>
-            <div class="source-name">State Bar</div>
-            <div class="source-desc">Attorney Licenses & Records</div>
-          </div>
-          <div class="source-item">
-            <div class="source-icon">🔬</div>
-            <div class="source-name">arXiv</div>
-            <div class="source-desc">Preprints & Academic Research</div>
+            <h3>Decide</h3>
+            <p>Review risk score and source documentation. Make confident, informed decisions.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- CTA Section -->
-    <section id="get-started" class="cta-section">
+    <section class="cta-section">
       <div class="cta-background">
         <div class="gradient-orb orb-3"></div>
-        <div class="gradient-orb orb-4"></div>
       </div>
       
       <div class="container cta-content">
-        <h2>Ready to Start Verifying?</h2>
-        <p>Get instant access to expert verification. Free for your first 5 searches.</p>
-        <a href="mailto:hello@expertedge.com" class="btn btn-primary btn-lg">
-          <span>Get Free Access Now</span>
+        <h2>Start Verifying Experts Today</h2>
+        <p>Get instant access to comprehensive expert verification. Free for your first search.</p>
+        <a href="/directory" class="btn btn-primary btn-lg">
+          <span>Search Now</span>
           <span class="arrow">→</span>
         </a>
       </div>
@@ -234,25 +153,25 @@ import SiteHeader from "../components/SiteHeader.astro";
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
+      <div class="footer-grid">
+        <div>
           <h4>Expert Edge</h4>
-          <p>Professional expert verification for legal professionals.</p>
+          <p>Professional expert verification platform for legal professionals.</p>
         </div>
-        <div class="footer-section">
-          <h4>Product</h4>
+        <div>
+          <h4>Platform</h4>
           <ul>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="/directory">Expert Directory</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/pricing">Pricing</a></li>
           </ul>
         </div>
-        <div class="footer-section">
-          <h4>Company</h4>
+        <div>
+          <h4>Legal</h4>
           <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
             <li><a href="#privacy">Privacy</a></li>
+            <li><a href="#terms">Terms</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -265,10 +184,6 @@ import SiteHeader from "../components/SiteHeader.astro";
   <style>
     :global(html) {
       scroll-behavior: smooth;
-    }
-
-    :global(body) {
-      overflow-x: hidden;
     }
 
     main {
@@ -342,15 +257,6 @@ import SiteHeader from "../components/SiteHeader.astro";
       animation: float 12s ease-in-out infinite;
     }
 
-    .orb-4 {
-      width: 500px;
-      height: 500px;
-      background: #001F5B;
-      bottom: -250px;
-      right: -250px;
-      animation: float 10s ease-in-out infinite 2s;
-    }
-
     @keyframes float {
       0%, 100% { transform: translate(0, 0); }
       50% { transform: translate(30px, -30px); }
@@ -379,19 +285,16 @@ import SiteHeader from "../components/SiteHeader.astro";
       }
     }
 
-    .hero-logo-wrapper {
+    .logo-showcase {
       margin-bottom: 2rem;
       display: flex;
       justify-content: center;
     }
 
-    .logo-container {
-      width: 120px;
-      height: 120px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      animation: scaleIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    .hero-logo {
+      width: 140px;
+      height: 140px;
+      animation: scaleIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), bobbing 3s ease-in-out infinite 0.8s;
     }
 
     @keyframes scaleIn {
@@ -405,18 +308,13 @@ import SiteHeader from "../components/SiteHeader.astro";
       }
     }
 
-    .hero-logo {
-      filter: drop-shadow(0 10px 30px rgba(0, 31, 91, 0.15));
-      animation: bobbing 3s ease-in-out infinite;
-    }
-
     @keyframes bobbing {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+      50% { transform: translateY(-12px); }
     }
 
     .hero-title {
-      font-size: clamp(2.5rem, 8vw, 4rem);
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
       line-height: 1.1;
       margin-bottom: 1.5rem;
       font-family: var(--font-display);
@@ -424,34 +322,10 @@ import SiteHeader from "../components/SiteHeader.astro";
       color: #001F5B;
     }
 
-    .text-gradient {
-      background: linear-gradient(135deg, #001F5B, #C4A77D);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .text-highlight {
-      color: #C4A77D;
-      position: relative;
-      display: inline-block;
-    }
-
-    .text-highlight::after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, #C4A77D, transparent);
-      border-radius: 2px;
-    }
-
     .hero-subtitle {
       font-size: 1.2rem;
       color: #606060;
-      max-width: 600px;
+      max-width: 650px;
       margin: 0 auto 2.5rem;
       line-height: 1.7;
     }
@@ -493,7 +367,6 @@ import SiteHeader from "../components/SiteHeader.astro";
       background: transparent;
       color: #001F5B;
       border: 2px solid #001F5B;
-      transition: all 0.3s ease;
     }
 
     .btn-secondary:hover {
@@ -545,12 +418,7 @@ import SiteHeader from "../components/SiteHeader.astro";
       letter-spacing: 0.05em;
     }
 
-    /* Features Section */
-    .features {
-      padding: 6rem 0;
-      background: linear-gradient(180deg, #F5F5F5, white);
-    }
-
+    /* Sections */
     .section-header {
       text-align: center;
       margin-bottom: 3rem;
@@ -560,29 +428,32 @@ import SiteHeader from "../components/SiteHeader.astro";
       font-size: clamp(2rem, 5vw, 3rem);
       color: #001F5B;
       margin-bottom: 1rem;
-      font-family: var(--font-display);
     }
 
     .section-header p {
       font-size: 1.1rem;
       color: #606060;
-      max-width: 500px;
+      max-width: 600px;
       margin: 0 auto;
     }
 
-    .features-grid {
+    /* Value Section */
+    .value-section {
+      padding: 6rem 0;
+      background: linear-gradient(180deg, #F5F5F5, white);
+    }
+
+    .value-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
     }
 
-    .feature-card {
+    .value-card {
       background: white;
       padding: 2rem;
       border-radius: 12px;
       border: 1px solid rgba(196, 167, 125, 0.1);
-      position: relative;
-      overflow: hidden;
       transition: all 0.3s ease;
       animation: slideInUp 0.6s ease-out backwards;
     }
@@ -598,44 +469,20 @@ import SiteHeader from "../components/SiteHeader.astro";
       }
     }
 
-    .feature-card:hover {
+    .value-card:hover {
       border-color: #C4A77D;
       box-shadow: 0 20px 40px rgba(196, 167, 125, 0.1);
       transform: translateY(-5px);
     }
 
-    .feature-icon {
-      font-size: 2.5rem;
+    .value-icon {
+      font-size: 3rem;
       margin-bottom: 1rem;
-      display: block;
     }
 
-    .feature-card h3 {
+    .value-card h3 {
       color: #001F5B;
       margin-bottom: 0.75rem;
-      font-size: 1.25rem;
-    }
-
-    .feature-card p {
-      color: #606060;
-      line-height: 1.6;
-      font-size: 0.95rem;
-    }
-
-    .feature-accent {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, #C4A77D, transparent);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.3s ease;
-    }
-
-    .feature-card:hover .feature-accent {
-      transform: scaleX(1);
     }
 
     /* How It Works */
@@ -648,104 +495,31 @@ import SiteHeader from "../components/SiteHeader.astro";
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
-      position: relative;
     }
 
     .step-card {
-      padding: 2.5rem 2rem;
-      position: relative;
+      padding: 2.5rem;
+      background: linear-gradient(135deg, #F5F5F5, white);
+      border-radius: 12px;
+      border: 1px solid rgba(196, 167, 125, 0.1);
       animation: slideInUp 0.6s ease-out backwards;
     }
 
-    .step-card:nth-child(1) { animation-delay: 0s; }
-    .step-card:nth-child(2) { animation-delay: 0.1s; }
-    .step-card:nth-child(3) { animation-delay: 0.2s; }
+    .step-card:hover {
+      border-color: #C4A77D;
+      box-shadow: 0 15px 30px rgba(196, 167, 125, 0.1);
+    }
 
     .step-number {
-      font-size: 3.5rem;
+      font-size: 2.5rem;
       font-weight: 700;
-      color: rgba(196, 167, 125, 0.2);
-      line-height: 1;
+      color: #C4A77D;
       margin-bottom: 1rem;
-      font-family: var(--font-display);
     }
 
-    .step-content h3 {
+    .step-card h3 {
       color: #001F5B;
       margin-bottom: 0.75rem;
-      font-size: 1.4rem;
-    }
-
-    .step-content p {
-      color: #606060;
-      line-height: 1.7;
-    }
-
-    .step-line {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 0;
-      background: linear-gradient(180deg, #C4A77D, transparent);
-      transition: height 0.8s ease-out 0.3s;
-    }
-
-    .step-card:hover .step-line {
-      height: 100%;
-    }
-
-    /* Data Sources */
-    .data-sources {
-      padding: 6rem 0;
-      background: linear-gradient(180deg, white, #F5F5F5);
-    }
-
-    .sources-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .source-item {
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      text-align: center;
-      border: 1px solid rgba(196, 167, 125, 0.1);
-      transition: all 0.3s ease;
-      animation: fadeInUp 0.6s ease-out backwards;
-    }
-
-    .source-item:nth-child(1) { animation-delay: 0s; }
-    .source-item:nth-child(2) { animation-delay: 0.1s; }
-    .source-item:nth-child(3) { animation-delay: 0.2s; }
-    .source-item:nth-child(4) { animation-delay: 0.3s; }
-    .source-item:nth-child(5) { animation-delay: 0.1s; }
-    .source-item:nth-child(6) { animation-delay: 0.2s; }
-    .source-item:nth-child(7) { animation-delay: 0.3s; }
-    .source-item:nth-child(8) { animation-delay: 0.4s; }
-
-    .source-item:hover {
-      border-color: #C4A77D;
-      box-shadow: 0 15px 30px rgba(196, 167, 125, 0.15);
-      transform: translateY(-3px);
-    }
-
-    .source-icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .source-name {
-      color: #001F5B;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .source-desc {
-      color: #999;
-      font-size: 0.85rem;
     }
 
     /* CTA Section */
@@ -759,7 +533,7 @@ import SiteHeader from "../components/SiteHeader.astro";
     .cta-background {
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, #001F5B 0%, #003d8a 100%);
+      background: linear-gradient(135deg, #001F5B 0%, #003A8A 100%);
       z-index: 0;
     }
 
@@ -773,7 +547,6 @@ import SiteHeader from "../components/SiteHeader.astro";
       font-size: clamp(2rem, 5vw, 3rem);
       color: white;
       margin-bottom: 1rem;
-      animation: fadeInUp 0.8s ease-out;
     }
 
     .cta-section p {
@@ -783,11 +556,6 @@ import SiteHeader from "../components/SiteHeader.astro";
       max-width: 500px;
       margin-left: auto;
       margin-right: auto;
-      animation: fadeInUp 0.8s ease-out 0.1s backwards;
-    }
-
-    .cta-section .btn {
-      animation: fadeInUp 0.8s ease-out 0.2s backwards;
     }
 
     /* Footer */
@@ -798,7 +566,7 @@ import SiteHeader from "../components/SiteHeader.astro";
       border-top: 3px solid #C4A77D;
     }
 
-    .footer-content {
+    .footer-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
@@ -807,42 +575,39 @@ import SiteHeader from "../components/SiteHeader.astro";
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .footer-section h4 {
+    .footer-grid h4 {
       color: #C4A77D;
       margin-bottom: 1rem;
     }
 
-    .footer-section p {
+    .footer-grid p {
       color: rgba(255, 255, 255, 0.7);
       line-height: 1.6;
-      font-size: 0.9rem;
     }
 
-    .footer-section ul {
+    .footer-grid ul {
       list-style: none;
     }
 
-    .footer-section li {
+    .footer-grid li {
       margin-bottom: 0.75rem;
     }
 
-    .footer-section a {
+    .footer-grid a {
       color: rgba(255, 255, 255, 0.7);
       text-decoration: none;
-      transition: color 0.3s ease;
+      transition: color 0.3s;
     }
 
-    .footer-section a:hover {
+    .footer-grid a:hover {
       color: #C4A77D;
     }
 
     .footer-bottom {
       text-align: center;
       color: rgba(255, 255, 255, 0.5);
-      font-size: 0.9rem;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       .hero-ctas {
         flex-direction: column;
@@ -850,19 +615,6 @@ import SiteHeader from "../components/SiteHeader.astro";
 
       .hero-stats {
         gap: 2rem;
-      }
-
-      .hero-title {
-        font-size: 2rem;
-      }
-
-      .features-grid,
-      .sources-grid {
-        gap: 1.5rem;
-      }
-
-      .section-header h2 {
-        font-size: 1.75rem;
       }
     }
   </style>
