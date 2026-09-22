@@ -2,7 +2,7 @@ import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  site: "https://gatekeeper.pages.dev",
+  site: "https://gatekeeper.vercel.app",
   output: "static",
   vite: {
     plugins: [tailwindcss()],

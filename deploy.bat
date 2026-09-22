@@ -1,11 +1,10 @@
 @echo off
 REM ============================================================================
-REM GATEKEEPER — AUTOMATED DEPLOYMENT (Astro -> Cloudflare Pages), WINDOWS
+REM GATEKEEPER — AUTOMATED DEPLOYMENT (Astro -> Vercel), WINDOWS
 REM ============================================================================
 REM 1. Installs Node dependencies
 REM 2. Optionally refreshes expert data from the Python backend
-REM 3. Builds the static Astro site
-REM 4. Deploys dist/ to Cloudflare Pages via Wrangler
+REM 3. Deploys to Vercel (Vercel builds the Astro site remotely)
 REM ============================================================================
 
 setlocal enabledelayedexpansion
@@ -45,17 +44,15 @@ if errorlevel 1 (
 )
 
 echo.
-echo ==^> Building static site
-call npm run build
+echo ==^> Deploying to Vercel
+
+where vercel >nul 2>&1
 if errorlevel 1 (
-    echo Build failed
-    pause
-    exit /b 1
+    echo Installing Vercel CLI...
+    call npm install -g vercel
 )
 
-echo.
-echo ==^> Deploying to Cloudflare Pages
-call npx wrangler pages deploy dist --project-name=gatekeeper
+call vercel --prod
 
 echo.
 echo Done. Your live URL is printed above.

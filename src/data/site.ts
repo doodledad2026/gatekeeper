@@ -94,19 +94,19 @@ export const deploySteps = [
   {
     code: "01",
     title: "Automated",
-    description: "One script fetches live data and deploys to Cloudflare Pages.",
+    description: "One script fetches live data and deploys to Vercel.",
     command: "chmod +x deploy.sh\n./deploy.sh",
   },
   {
     code: "02",
     title: "Manual",
     description: "Fetch data yourself, then build and publish.",
-    command: "python3 gatekeeper_backend_enhanced.py\nnpm run build",
+    command: "python3 gatekeeper_backend_enhanced.py\nnpm run build\nvercel --prod",
   },
   {
     code: "03",
     title: "Git-connected",
-    description: "Push to GitHub and connect the repo for auto-deploys on every commit.",
-    command: "git push origin main\n# connect the repo in the Cloudflare Pages dashboard",
+    description: "Push to GitHub and import the repo for auto-deploys on every commit.",
+    command: "git push origin main\n# import the repo at vercel.com/new",
   },
 ];

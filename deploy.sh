@@ -1,12 +1,11 @@
 #!/bin/bash
 
 # ============================================================================
-# GATEKEEPER — AUTOMATED DEPLOYMENT (Astro -> Cloudflare Pages)
+# GATEKEEPER — AUTOMATED DEPLOYMENT (Astro -> Vercel)
 # ============================================================================
 # 1. Installs Node dependencies
 # 2. Optionally refreshes expert data from the Python backend
-# 3. Builds the static Astro site
-# 4. Deploys dist/ to Cloudflare Pages via Wrangler
+# 3. Deploys to Vercel (Vercel builds the Astro site remotely)
 # ============================================================================
 
 set -e
@@ -40,12 +39,14 @@ else
 fi
 
 echo ""
-echo "==> Building static site"
-npm run build
+echo "==> Deploying to Vercel"
 
-echo ""
-echo "==> Deploying to Cloudflare Pages"
-npx wrangler pages deploy dist --project-name=gatekeeper
+if ! command -v vercel &> /dev/null; then
+  echo "Installing Vercel CLI..."
+  npm install -g vercel --quiet
+fi
+
+vercel --prod
 
 echo ""
 echo "Done. Your live URL is printed above."
