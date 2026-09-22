@@ -1,0 +1,46 @@
+---
+import GuideLayout from "../../layouts/GuideLayout.astro";
+---
+<GuideLayout
+  title="Scoring System"
+  description="How a record's risk score and risk level are calculated."
+>
+  <p>
+    Every record carries a numeric <strong>score</strong> and a
+    <strong>risk level</strong> derived from it. The score accumulates points
+    from specific, named findings across the eight registries — it is not a
+    black box, and every point is traceable to a source.
+  </p>
+
+  <h2>Risk levels</h2>
+  <table>
+    <thead>
+      <tr><th>Level</th><th>Score range</th><th>Read as</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>LOW</td><td>0 – 2</td><td>No material findings across the checked sources.</td></tr>
+      <tr><td>MEDIUM</td><td>3 – 7</td><td>Minor or unconfirmed findings — worth a manual glance.</td></tr>
+      <tr><td>HIGH</td><td>8 – 15</td><td>At least one substantive finding — read the full record before retention.</td></tr>
+      <tr><td>CRITICAL</td><td>16+</td><td>Multiple or severe findings — retractions, license action, or both.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>What feeds the score</h2>
+  <ul>
+    <li><strong>Retractions</strong> — a retracted paper is the single heaviest-weighted signal.</li>
+    <li><strong>Licensure</strong> — a suspended or revoked license (medical board, state bar, PE license, FINRA/SEC status, depending on industry).</li>
+    <li><strong>Litigation history</strong> — prior MDL/JPML appearances or repeated case involvement in the same subject matter.</li>
+    <li><strong>Funding disclosures</strong> — NIH or grant funding that overlaps with the subject of testimony, which can raise disclosure questions even without misconduct.</li>
+    <li><strong>Publication record</strong> — citation count and publication volume, used as context rather than a penalty.</li>
+  </ul>
+
+  <h2>What it does not do</h2>
+  <p>
+    The score does not read sentiment, does not weigh case outcomes, and does
+    not penalize an expert for having testified before. It only reflects
+    what the eight registries return for that name at the time of the last
+    data refresh — see <a href="/guide/data-sources/">Data Sources</a> for
+    what each one covers, and <a href="/guide/how-to-use/">How To Use</a> for
+    how to treat a flagged record.
+  </p>
+</GuideLayout>

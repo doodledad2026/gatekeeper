@@ -1,0 +1,45 @@
+---
+import GuideLayout from "../../layouts/GuideLayout.astro";
+---
+<GuideLayout
+  title="Data Sources"
+  description="The eight public registries Gatekeeper checks against, and what each one covers."
+>
+  <p>
+    Every source below is a free, official registry — no scraping, no paid
+    data brokers. Coverage varies by industry: a financial expert won't have
+    a PubMed record, and that's expected, not a gap.
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Source</th><th>Covers</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>RetractionWatch</td><td>Retracted publications and the stated reason for retraction.</td></tr>
+      <tr><td>ORCID</td><td>Researcher identity and publication history across 50M+ records.</td></tr>
+      <tr><td>NIH Reporter</td><td>Federal grant funding — amount, count, and overlap with subject matter.</td></tr>
+      <tr><td>CrossRef</td><td>Publication metadata across 100M+ indexed works.</td></tr>
+      <tr><td>PubMed</td><td>Medical and life-sciences literature, 30M+ papers.</td></tr>
+      <tr><td>arXiv</td><td>Preprints in physics, engineering, and quantitative fields.</td></tr>
+      <tr><td>USPTO Patents</td><td>Patent filings and inventorship, 10M+ records.</td></tr>
+      <tr><td>State Bar Registries</td><td>Attorney licensure status and disciplinary history.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Refresh cycle</h2>
+  <p>
+    Data is fetched by <code>gatekeeper_backend_enhanced.py</code>, which
+    writes to <code>expert_data.json</code>. The site reads that file at
+    runtime, so refreshing the data doesn't require a rebuild — see
+    <a href="/guide/how-to-use/">How To Use</a> for the refresh command.
+  </p>
+
+  <h2>When a source has nothing</h2>
+  <p>
+    A source with no hit for a given name is marked <em>Pending</em> in a
+    record's breakdown, not <em>Failed</em>. It means that registry has no
+    matching entry — which is the expected, clean result for most experts on
+    most sources.
+  </p>
+</GuideLayout>

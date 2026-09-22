@@ -2,7 +2,13 @@
 // Fetches /expert_data.json at runtime so the record set can be
 // refreshed independently of the Astro build.
 
-type SourceResult = { success?: boolean };
+type Retractions = { count: number; reason: string; year: number } | null;
+type License = { status: "Active" | "Suspended" | "Revoked"; board: string };
+type Academic = { h_index: number; citations: number; source: string };
+type Funding = { amount: number; grants: number; source: string } | null;
+type Litigation = { appearances: number; categories: string[]; label: string; source: string } | null;
+type Patents = { count: number; source: string } | null;
+type Publications = { count: number; source: string };
 
 type Expert = {
   name: string;
@@ -10,18 +16,19 @@ type Expert = {
   industry: string;
   score: number;
   risk_level: "LOW" | "MEDIUM" | "HIGH" | "CRITICAL";
-  data: Record<string, SourceResult>;
+  summary: string;
+  flags: string[];
+  original_sources: string[];
+  dossier: {
+    retractions: Retractions;
+    license: License;
+    academic: Academic;
+    funding: Funding;
+    litigation: Litigation;
+    patents: Patents;
+    publications: Publications;
+  };
 };
-
-const SOURCES: { key: string; label: string }[] = [
-  { key: "retractionwatch", label: "RetractionWatch" },
-  { key: "orcid", label: "ORCID" },
-  { key: "nih_reporter", label: "NIH Reporter" },
-  { key: "crossref", label: "CrossRef" },
-  { key: "pubmed", label: "PubMed" },
-  { key: "arxiv", label: "arXiv" },
-  { key: "uspto_patents", label: "USPTO Patents" },
-];
 
 const RISK_STYLES: Record<Expert["risk_level"], string> = {
   LOW: "text-risk-low border-risk-low/40",
@@ -41,9 +48,80 @@ function debounce<T extends (...args: never[]) => void>(fn: T, wait: number) {
   };
 }
 
-function verifiedCount(data: Expert["data"]) {
-  return SOURCES.filter((s) => data[s.key]?.success !== false).length;
+function money(n: number) {
+  return n >= 1000 ? `$${Math.round(n / 1000)}K` : `$${n}`;
 }
+
+type DossierRow = { label: string; detail: string; source: string; tone: "critical" | "medium" | "neutral" };
+
+function buildDossierRows(d: Expert["dossier"]): DossierRow[] {
+  const rows: DossierRow[] = [];
+
+  if (d.retractions) {
+    rows.push({
+      label: `${d.retractions.count} RETRACTION${d.retractions.count > 1 ? "S" : ""}`,
+      detail: `${d.retractions.reason} (${d.retractions.year})`,
+      source: "RetractionWatch",
+      tone: "critical",
+    });
+  }
+
+  rows.push({
+    label: "H-INDEX " + d.academic.h_index,
+    detail: `${d.academic.citations.toLocaleString()} citations`,
+    source: d.academic.source,
+    tone: "neutral",
+  });
+
+  rows.push({
+    label: d.license.status === "Active" ? "LICENSE ACTIVE" : `LICENSE ${d.license.status.toUpperCase()}`,
+    detail: d.license.board,
+    source: d.license.board,
+    tone: d.license.status === "Active" ? "neutral" : "critical",
+  });
+
+  if (d.funding) {
+    rows.push({
+      label: `${money(d.funding.amount)} FUNDING`,
+      detail: `${d.funding.grants} grant${d.funding.grants > 1 ? "s" : ""}`,
+      source: d.funding.source,
+      tone: "medium",
+    });
+  }
+
+  if (d.litigation) {
+    rows.push({
+      label: `${d.litigation.label.toUpperCase()}: ${d.litigation.appearances}`,
+      detail: d.litigation.categories.join(", "),
+      source: d.litigation.source,
+      tone: "medium",
+    });
+  }
+
+  if (d.patents) {
+    rows.push({
+      label: `${d.patents.count} PATENT${d.patents.count > 1 ? "S" : ""}`,
+      detail: "Inventorship on file",
+      source: d.patents.source,
+      tone: "neutral",
+    });
+  }
+
+  rows.push({
+    label: `${d.publications.count} PUBLICATIONS`,
+    detail: "Indexed record",
+    source: d.publications.source,
+    tone: "neutral",
+  });
+
+  return rows;
+}
+
+const TONE_CLASS: Record<DossierRow["tone"], string> = {
+  critical: "text-risk-critical",
+  medium: "text-signal",
+  neutral: "text-ink",
+};
 
 function buildRow(expert: Expert): HTMLElement {
   const details = document.createElement("details");
@@ -65,7 +143,16 @@ function buildRow(expert: Expert): HTMLElement {
   const specialty = document.createElement("p");
   specialty.className = "truncate font-mono text-xs text-ink-soft";
   specialty.textContent = expert.specialty;
-  nameBlock.append(name, specialty);
+  const summaryTone: Record<Expert["risk_level"], string> = {
+    LOW: "text-ink-soft",
+    MEDIUM: "text-risk-medium",
+    HIGH: "text-risk-high",
+    CRITICAL: "text-risk-critical",
+  };
+  const summaryLine = document.createElement("p");
+  summaryLine.className = `mt-1 truncate text-xs ${expert.flags.length ? summaryTone[expert.risk_level] : "text-ink-soft"}`;
+  summaryLine.textContent = expert.summary;
+  nameBlock.append(name, specialty, summaryLine);
 
   const industry = document.createElement("span");
   industry.className = "hidden font-mono text-xs tracking-wide text-ink-soft uppercase sm:block";
@@ -81,20 +168,43 @@ function buildRow(expert: Expert): HTMLElement {
   summary.append(badge, nameBlock, industry, score, chevronWrap.firstElementChild as Node);
 
   const panel = document.createElement("div");
-  panel.className = "grid grid-cols-1 gap-1 pb-5 sm:grid-cols-2";
-  SOURCES.forEach((source) => {
-    const ok = expert.data[source.key]?.success !== false;
-    const row = document.createElement("div");
-    row.className = "flex items-center justify-between border-b border-line/60 py-1.5 text-xs";
-    const label = document.createElement("span");
-    label.className = "text-ink-soft";
-    label.textContent = source.label;
-    const status = document.createElement("span");
-    status.className = `font-mono uppercase ${ok ? "text-risk-low" : "text-ink-soft"}`;
-    status.textContent = ok ? "Verified" : "Pending";
-    row.append(label, status);
-    panel.append(row);
+  panel.className = "pb-5";
+
+  const panelHead = document.createElement("h4");
+  panelHead.className = "mb-2 font-mono text-[11px] tracking-widest text-ink-soft uppercase";
+  panelHead.textContent = "Data sources (8 free tools)";
+  panel.append(panelHead);
+
+  const grid = document.createElement("div");
+  grid.className = "border-t border-line";
+  buildDossierRows(expert.dossier).forEach((row) => {
+    const rowEl = document.createElement("div");
+    rowEl.className = "flex flex-wrap items-baseline justify-between gap-x-3 gap-y-0.5 border-b border-line/60 py-2 text-xs";
+
+    const left = document.createElement("span");
+    left.className = `font-mono font-semibold ${TONE_CLASS[row.tone]}`;
+    left.textContent = row.label;
+
+    const mid = document.createElement("span");
+    mid.className = "flex-1 text-ink-soft";
+    mid.textContent = row.detail;
+
+    const right = document.createElement("span");
+    right.className = "font-mono text-[11px] text-ink-soft/70 uppercase";
+    right.textContent = row.source;
+
+    rowEl.append(left, mid, right);
+    grid.append(rowEl);
   });
+  panel.append(grid);
+
+  const sourcesLine = document.createElement("p");
+  sourcesLine.className = "mt-3 text-xs text-ink-soft";
+  const sourcesLabel = document.createElement("span");
+  sourcesLabel.className = "font-semibold text-ink";
+  sourcesLabel.textContent = "Original sources: ";
+  sourcesLine.append(sourcesLabel, document.createTextNode(expert.original_sources.join(", ")));
+  panel.append(sourcesLine);
 
   details.append(summary, panel);
   return details;
@@ -125,10 +235,8 @@ export function initDirectory() {
       return matchesTerm && matchesIndustry && matchesRisk;
     });
 
-    count.textContent = `${filtered.length} of ${experts.length} records — ${filtered.reduce(
-      (sum, e) => sum + verifiedCount(e.data),
-      0
-    )} source hits`;
+    const flagged = filtered.filter((e) => e.flags.length > 0).length;
+    count.textContent = `${filtered.length} of ${experts.length} records — ${flagged} with findings`;
 
     results.replaceChildren();
     if (filtered.length === 0) {

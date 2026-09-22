@@ -1,0 +1,42 @@
+---
+import GuideLayout from "../../layouts/GuideLayout.astro";
+
+const faqs = [
+  {
+    q: "Is a CRITICAL score a reason to disqualify an expert automatically?",
+    a: "No. Treat it as a prioritization signal — read the underlying finding, verify it against the primary source, and make the retention decision yourself. See Scoring System for what feeds the score.",
+  },
+  {
+    q: "How often is the data refreshed?",
+    a: "Whenever gatekeeper_backend_enhanced.py is run against the eight registries. The site reads expert_data.json at runtime, so a refresh doesn't require a rebuild or redeploy.",
+  },
+  {
+    q: "Can I add my own experts?",
+    a: "Yes. Add names to the industry lists in gatekeeper_backend_enhanced.py, run it, and the generated expert_data.json will include them the next time it's loaded.",
+  },
+  {
+    q: "What happens if a source is unreachable when data is fetched?",
+    a: "That source is marked Pending for the affected records rather than treated as a clean result, so a temporary outage doesn't silently lower anyone's score.",
+  },
+  {
+    q: "Is this legal advice?",
+    a: "No. Gatekeeper surfaces public-record findings; whether and how they matter to a specific engagement is a judgment call for counsel, not something the score makes for you.",
+  },
+  {
+    q: "Does it store any private or personal data?",
+    a: "No. Every field comes from a public registry — publications, patents, funding disclosures, licensure status. Nothing non-public is collected or stored.",
+  },
+  {
+    q: "Can I self-host this?",
+    a: "Yes — it's a static Astro site with no server or CMS. See How To Use and the Deploy section on the homepage for the one-command deploy.",
+  },
+];
+---
+<GuideLayout title="FAQ" description="Common questions about Gatekeeper's scoring, data, and deployment.">
+  {faqs.map((item) => (
+    <details>
+      <summary>{item.q}</summary>
+      <p>{item.a}</p>
+    </details>
+  ))}
+</GuideLayout>

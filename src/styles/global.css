@@ -13,18 +13,21 @@
   --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
 
-  --color-ink: #14171c;
-  --color-ink-soft: #454c56;
-  --color-paper: #f7f6f2;
-  --color-paper-alt: #edeae1;
-  --color-line: #d9d5c9;
-  --color-signal: #b3261e;
-  --color-signal-soft: #d9c3a8;
+  /* Dark, modern palette. `ink` = light text, `paper` = dark surfaces —
+     kept as the semantic names throughout components. */
+  --color-ink: #edeff2;
+  --color-ink-soft: #9198a6;
+  --color-paper: #0a0c10;
+  --color-paper-alt: #12151b;
+  --color-panel: #05060a;
+  --color-line: #ffffff1f;
+  --color-signal: #d7a24a;
+  --color-signal-soft: #3a2f1c;
 
-  --color-risk-low: #3f6b4c;
-  --color-risk-medium: #93711c;
-  --color-risk-high: #a1571c;
-  --color-risk-critical: #b3261e;
+  --color-risk-low: #57b487;
+  --color-risk-medium: #d7a24a;
+  --color-risk-high: #e08a4c;
+  --color-risk-critical: #e5677a;
 }
 
 html {

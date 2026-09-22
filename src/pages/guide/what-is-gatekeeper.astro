@@ -1,0 +1,39 @@
+---
+import GuideLayout from "../../layouts/GuideLayout.astro";
+---
+<GuideLayout
+  title="What is Gatekeeper"
+  description="Gatekeeper is a verification system for expert witnesses and consultants, cross-checked against public registries."
+>
+  <p>
+    Gatekeeper is a verification system for expert witnesses and consultants.
+    Before a name goes on a witness list, into a deposition, or in front of a
+    jury, Gatekeeper cross-checks it against public registries — publications,
+    retractions, funding, patents, litigation history, and licensure — and
+    returns a single, defensible risk score.
+  </p>
+  <p>
+    It covers five industries: <strong>MDL / Medical</strong>, <strong>Environmental Law</strong>, <strong>Financial</strong>, <strong>Engineering</strong>, and <strong>Scientific</strong>. Each
+    industry has its own mix of signals — a medical expert's record leans on
+    retractions and NIH funding, a financial expert's on disciplinary filings
+    — but every record is scored against the same standard.
+  </p>
+
+  <h2>What it is not</h2>
+  <ul>
+    <li>Not a background-check service for personal or criminal history.</li>
+    <li>Not legal advice, and not a substitute for independent diligence on a specific engagement.</li>
+    <li>Not a closed database — it's built to be pointed at your own expert list.</li>
+  </ul>
+
+  <h2>How it's built</h2>
+  <p>
+    A Python backend (<code>gatekeeper_backend_enhanced.py</code>) queries
+    eight public sources and writes the results to <code>expert_data.json</code>.
+    The site itself is a static Astro build — no server, no database, no CMS —
+    that reads that file at runtime, so the directory can be refreshed
+    independently of a redeploy. See <a href="/guide/data-sources/">Data Sources</a>
+    for the full list, and <a href="/guide/scoring-system/">Scoring System</a>
+    for how a record's risk level is calculated.
+  </p>
+</GuideLayout>

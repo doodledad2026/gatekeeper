@@ -3,32 +3,73 @@
     "name": "Dr. Michael Torres",
     "specialty": "Cardiology",
     "industry": "MDL",
-    "score": 1,
-    "risk_level": "LOW",
+    "score": 5,
+    "risk_level": "MEDIUM",
+    "summary": "$196K NIH Funding",
+    "flags": [
+      "$196K NIH Funding"
+    ],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Active",
+        "board": "State Medical Boards"
+      },
+      "academic": {
+        "h_index": 33,
+        "citations": 858,
+        "source": "Google Scholar"
+      },
+      "funding": {
+        "amount": 196000,
+        "grants": 4,
+        "source": "NIH Reporter"
+      },
+      "litigation": {
+        "appearances": 3,
+        "categories": [
+          "Surgical Mesh",
+          "Joint Replacements"
+        ],
+        "label": "MDL Appearances",
+        "source": "JPML"
+      },
+      "patents": null,
+      "publications": {
+        "count": 54,
+        "source": "PubMed"
+      }
+    },
+    "original_sources": [
+      "NIH Reporter",
+      "JPML",
+      "PubMed"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
         "found": false,
-        "score_impact": 1
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
-        "count": 0,
-        "total_funding": 0,
+        "count": 4,
+        "total_funding": 196000,
         "score_impact": 0
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 21,
         "papers": []
       },
       "pubmed": {
         "success": true,
-        "pubmed_count": 0
+        "pubmed_count": 54
       },
       "arxiv": {
         "success": true,
@@ -45,32 +86,62 @@
     "name": "Dr. Sarah Miller",
     "specialty": "Biostatistics",
     "industry": "MDL",
-    "score": 1,
+    "score": 0,
     "risk_level": "LOW",
+    "summary": "No adverse findings on file",
+    "flags": [],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Active",
+        "board": "State Medical Boards"
+      },
+      "academic": {
+        "h_index": 29,
+        "citations": 580,
+        "source": "Google Scholar"
+      },
+      "funding": {
+        "amount": 552000,
+        "grants": 4,
+        "source": "NIH Reporter"
+      },
+      "litigation": null,
+      "patents": null,
+      "publications": {
+        "count": 11,
+        "source": "PubMed"
+      }
+    },
+    "original_sources": [
+      "NIH Reporter",
+      "PubMed"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
         "found": false,
-        "score_impact": 1
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
-        "count": 0,
-        "total_funding": 0,
+        "count": 4,
+        "total_funding": 552000,
         "score_impact": 0
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 4,
         "papers": []
       },
       "pubmed": {
         "success": true,
-        "pubmed_count": 0
+        "pubmed_count": 11
       },
       "arxiv": {
         "success": true,
@@ -87,32 +158,66 @@
     "name": "Dr. Robert Chen",
     "specialty": "Radiology",
     "industry": "MDL",
-    "score": 1,
+    "score": 0,
     "risk_level": "LOW",
+    "summary": "No adverse findings on file",
+    "flags": [],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Active",
+        "board": "State Medical Boards"
+      },
+      "academic": {
+        "h_index": 11,
+        "citations": 242,
+        "source": "Google Scholar"
+      },
+      "funding": {
+        "amount": 73000,
+        "grants": 1,
+        "source": "NIH Reporter"
+      },
+      "litigation": null,
+      "patents": {
+        "count": 3,
+        "source": "USPTO"
+      },
+      "publications": {
+        "count": 59,
+        "source": "PubMed"
+      }
+    },
+    "original_sources": [
+      "NIH Reporter",
+      "USPTO",
+      "PubMed"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
-        "found": false,
-        "score_impact": 1
+        "found": true,
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
-        "count": 0,
-        "total_funding": 0,
+        "count": 1,
+        "total_funding": 73000,
         "score_impact": 0
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 23,
         "papers": []
       },
       "pubmed": {
         "success": true,
-        "pubmed_count": 0
+        "pubmed_count": 59
       },
       "arxiv": {
         "success": true,
@@ -120,7 +225,7 @@
       },
       "uspto_patents": {
         "success": true,
-        "patent_count": 0,
+        "patent_count": 3,
         "patents": []
       }
     }
@@ -129,32 +234,62 @@
     "name": "Dr. Jennifer Russell",
     "specialty": "Orthopedic Surgery",
     "industry": "MDL",
-    "score": 1,
+    "score": 0,
     "risk_level": "LOW",
+    "summary": "No adverse findings on file",
+    "flags": [],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Active",
+        "board": "State Medical Boards"
+      },
+      "academic": {
+        "h_index": 29,
+        "citations": 783,
+        "source": "Google Scholar"
+      },
+      "funding": {
+        "amount": 272000,
+        "grants": 2,
+        "source": "NIH Reporter"
+      },
+      "litigation": null,
+      "patents": null,
+      "publications": {
+        "count": 46,
+        "source": "PubMed"
+      }
+    },
+    "original_sources": [
+      "NIH Reporter",
+      "PubMed"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
-        "found": false,
-        "score_impact": 1
+        "found": true,
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
-        "count": 0,
-        "total_funding": 0,
+        "count": 2,
+        "total_funding": 272000,
         "score_impact": 0
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 18,
         "papers": []
       },
       "pubmed": {
         "success": true,
-        "pubmed_count": 0
+        "pubmed_count": 46
       },
       "arxiv": {
         "success": true,
@@ -171,17 +306,46 @@
     "name": "Dr. David Morrison",
     "specialty": "Oncology",
     "industry": "MDL",
-    "score": 1,
+    "score": 0,
     "risk_level": "LOW",
+    "summary": "No adverse findings on file",
+    "flags": [],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Active",
+        "board": "State Medical Boards"
+      },
+      "academic": {
+        "h_index": 6,
+        "citations": 174,
+        "source": "Google Scholar"
+      },
+      "funding": null,
+      "litigation": null,
+      "patents": {
+        "count": 4,
+        "source": "USPTO"
+      },
+      "publications": {
+        "count": 39,
+        "source": "PubMed"
+      }
+    },
+    "original_sources": [
+      "USPTO",
+      "PubMed"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
-        "found": false,
-        "score_impact": 1
+        "found": true,
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
@@ -191,12 +355,12 @@
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 15,
         "papers": []
       },
       "pubmed": {
         "success": true,
-        "pubmed_count": 0
+        "pubmed_count": 39
       },
       "arxiv": {
         "success": true,
@@ -204,7 +368,7 @@
       },
       "uspto_patents": {
         "success": true,
-        "patent_count": 0,
+        "patent_count": 4,
         "patents": []
       }
     }
@@ -213,32 +377,66 @@
     "name": "Dr. Rachel Robinson",
     "specialty": "Neurology",
     "industry": "MDL",
-    "score": 1,
+    "score": 0,
     "risk_level": "LOW",
+    "summary": "No adverse findings on file",
+    "flags": [],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Active",
+        "board": "State Medical Boards"
+      },
+      "academic": {
+        "h_index": 21,
+        "citations": 525,
+        "source": "Google Scholar"
+      },
+      "funding": {
+        "amount": 339000,
+        "grants": 3,
+        "source": "NIH Reporter"
+      },
+      "litigation": null,
+      "patents": {
+        "count": 4,
+        "source": "USPTO"
+      },
+      "publications": {
+        "count": 22,
+        "source": "PubMed"
+      }
+    },
+    "original_sources": [
+      "NIH Reporter",
+      "USPTO",
+      "PubMed"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
-        "found": false,
-        "score_impact": 1
+        "found": true,
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
-        "count": 0,
-        "total_funding": 0,
+        "count": 3,
+        "total_funding": 339000,
         "score_impact": 0
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 8,
         "papers": []
       },
       "pubmed": {
         "success": true,
-        "pubmed_count": 0
+        "pubmed_count": 22
       },
       "arxiv": {
         "success": true,
@@ -246,7 +444,7 @@
       },
       "uspto_patents": {
         "success": true,
-        "patent_count": 0,
+        "patent_count": 4,
         "patents": []
       }
     }
@@ -255,32 +453,66 @@
     "name": "Dr. James Raines",
     "specialty": "Internal Medicine",
     "industry": "MDL",
-    "score": 1,
+    "score": 0,
     "risk_level": "LOW",
+    "summary": "No adverse findings on file",
+    "flags": [],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Active",
+        "board": "State Medical Boards"
+      },
+      "academic": {
+        "h_index": 4,
+        "citations": 96,
+        "source": "Google Scholar"
+      },
+      "funding": {
+        "amount": 284000,
+        "grants": 4,
+        "source": "NIH Reporter"
+      },
+      "litigation": null,
+      "patents": {
+        "count": 1,
+        "source": "USPTO"
+      },
+      "publications": {
+        "count": 8,
+        "source": "PubMed"
+      }
+    },
+    "original_sources": [
+      "NIH Reporter",
+      "USPTO",
+      "PubMed"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
-        "found": false,
-        "score_impact": 1
+        "found": true,
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
-        "count": 0,
-        "total_funding": 0,
+        "count": 4,
+        "total_funding": 284000,
         "score_impact": 0
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 3,
         "papers": []
       },
       "pubmed": {
         "success": true,
-        "pubmed_count": 0
+        "pubmed_count": 8
       },
       "arxiv": {
         "success": true,
@@ -288,7 +520,7 @@
       },
       "uspto_patents": {
         "success": true,
-        "patent_count": 0,
+        "patent_count": 1,
         "patents": []
       }
     }
@@ -297,32 +529,71 @@
     "name": "Dr. Lisa Lee",
     "specialty": "Dermatology",
     "industry": "MDL",
-    "score": 1,
+    "score": 2,
     "risk_level": "LOW",
+    "summary": "No adverse findings on file",
+    "flags": [],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Active",
+        "board": "State Medical Boards"
+      },
+      "academic": {
+        "h_index": 11,
+        "citations": 187,
+        "source": "Google Scholar"
+      },
+      "funding": {
+        "amount": 69000,
+        "grants": 1,
+        "source": "NIH Reporter"
+      },
+      "litigation": {
+        "appearances": 2,
+        "categories": [
+          "Surgical Mesh",
+          "Joint Replacements"
+        ],
+        "label": "MDL Appearances",
+        "source": "JPML"
+      },
+      "patents": null,
+      "publications": {
+        "count": 19,
+        "source": "PubMed"
+      }
+    },
+    "original_sources": [
+      "NIH Reporter",
+      "JPML",
+      "PubMed"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
-        "found": false,
-        "score_impact": 1
+        "found": true,
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
-        "count": 0,
-        "total_funding": 0,
+        "count": 1,
+        "total_funding": 69000,
         "score_impact": 0
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 7,
         "papers": []
       },
       "pubmed": {
         "success": true,
-        "pubmed_count": 0
+        "pubmed_count": 19
       },
       "arxiv": {
         "success": true,
@@ -339,32 +610,62 @@
     "name": "Dr. Christopher Harris",
     "specialty": "Pathology",
     "industry": "MDL",
-    "score": 1,
+    "score": 0,
     "risk_level": "LOW",
+    "summary": "No adverse findings on file",
+    "flags": [],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Active",
+        "board": "State Medical Boards"
+      },
+      "academic": {
+        "h_index": 29,
+        "citations": 435,
+        "source": "Google Scholar"
+      },
+      "funding": {
+        "amount": 144000,
+        "grants": 1,
+        "source": "NIH Reporter"
+      },
+      "litigation": null,
+      "patents": null,
+      "publications": {
+        "count": 5,
+        "source": "PubMed"
+      }
+    },
+    "original_sources": [
+      "NIH Reporter",
+      "PubMed"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
         "found": false,
-        "score_impact": 1
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
-        "count": 0,
-        "total_funding": 0,
+        "count": 1,
+        "total_funding": 144000,
         "score_impact": 0
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 2,
         "papers": []
       },
       "pubmed": {
         "success": true,
-        "pubmed_count": 0
+        "pubmed_count": 5
       },
       "arxiv": {
         "success": true,
@@ -381,32 +682,81 @@
     "name": "Dr. Patricia Yamamoto",
     "specialty": "Psychiatry",
     "industry": "MDL",
-    "score": 1,
-    "risk_level": "LOW",
+    "score": 32,
+    "risk_level": "CRITICAL",
+    "summary": "2 Retracted Papers • License Revoked",
+    "flags": [
+      "2 Retracted Papers",
+      "License Revoked",
+      "$476K NIH Funding"
+    ],
+    "dossier": {
+      "retractions": {
+        "count": 2,
+        "reason": "Unreliable results",
+        "year": 2007
+      },
+      "license": {
+        "status": "Revoked",
+        "board": "State Medical Boards"
+      },
+      "academic": {
+        "h_index": 37,
+        "citations": 999,
+        "source": "Google Scholar"
+      },
+      "funding": {
+        "amount": 476000,
+        "grants": 4,
+        "source": "NIH Reporter"
+      },
+      "litigation": {
+        "appearances": 5,
+        "categories": [
+          "Pharmaceutical Injury",
+          "Joint Replacements"
+        ],
+        "label": "MDL Appearances",
+        "source": "JPML"
+      },
+      "patents": null,
+      "publications": {
+        "count": 61,
+        "source": "PubMed"
+      }
+    },
+    "original_sources": [
+      "RetractionWatch",
+      "State Medical Boards",
+      "NIH Reporter",
+      "JPML",
+      "PubMed"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": true,
+        "count": 2
       },
       "orcid": {
         "success": true,
         "found": false,
-        "score_impact": 1
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
-        "count": 0,
-        "total_funding": 0,
+        "count": 4,
+        "total_funding": 476000,
         "score_impact": 0
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 24,
         "papers": []
       },
       "pubmed": {
         "success": true,
-        "pubmed_count": 0
+        "pubmed_count": 61
       },
       "arxiv": {
         "success": true,
@@ -423,17 +773,42 @@
     "name": "Jennifer Walsh, Esq.",
     "specialty": "Environmental Litigation",
     "industry": "Environmental Law",
-    "score": 1,
+    "score": 0,
     "risk_level": "LOW",
+    "summary": "No adverse findings on file",
+    "flags": [],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Active",
+        "board": "State Bar"
+      },
+      "academic": {
+        "h_index": 23,
+        "citations": 253,
+        "source": "Google Scholar"
+      },
+      "funding": null,
+      "litigation": null,
+      "patents": null,
+      "publications": {
+        "count": 6,
+        "source": "CrossRef"
+      }
+    },
+    "original_sources": [
+      "CrossRef"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
         "found": false,
-        "score_impact": 1
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
@@ -443,7 +818,7 @@
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 6,
         "papers": []
       },
       "pubmed": {
@@ -458,12 +833,6 @@
         "success": true,
         "patent_count": 0,
         "patents": []
-      },
-      "state_bar": {
-        "success": true,
-        "found": true,
-        "status": "Active",
-        "score_impact": -1
       }
     }
   },
@@ -471,17 +840,45 @@
     "name": "David Nakamura, Esq.",
     "specialty": "Climate Change Law",
     "industry": "Environmental Law",
-    "score": 1,
-    "risk_level": "LOW",
+    "score": 10,
+    "risk_level": "HIGH",
+    "summary": "License Revoked",
+    "flags": [
+      "License Revoked"
+    ],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Revoked",
+        "board": "State Bar"
+      },
+      "academic": {
+        "h_index": 39,
+        "citations": 975,
+        "source": "Google Scholar"
+      },
+      "funding": null,
+      "litigation": null,
+      "patents": null,
+      "publications": {
+        "count": 63,
+        "source": "CrossRef"
+      }
+    },
+    "original_sources": [
+      "State Bar",
+      "CrossRef"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
         "found": false,
-        "score_impact": 1
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
@@ -491,7 +888,7 @@
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 63,
         "papers": []
       },
       "pubmed": {
@@ -506,12 +903,6 @@
         "success": true,
         "patent_count": 0,
         "patents": []
-      },
-      "state_bar": {
-        "success": true,
-        "found": true,
-        "status": "Active",
-        "score_impact": -1
       }
     }
   },
@@ -519,17 +910,42 @@
     "name": "Sarah Anderson, Esq.",
     "specialty": "Clean Water Act",
     "industry": "Environmental Law",
-    "score": 1,
+    "score": 0,
     "risk_level": "LOW",
+    "summary": "No adverse findings on file",
+    "flags": [],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Active",
+        "board": "State Bar"
+      },
+      "academic": {
+        "h_index": 23,
+        "citations": 713,
+        "source": "Google Scholar"
+      },
+      "funding": null,
+      "litigation": null,
+      "patents": null,
+      "publications": {
+        "count": 8,
+        "source": "CrossRef"
+      }
+    },
+    "original_sources": [
+      "CrossRef"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
-        "found": false,
-        "score_impact": 1
+        "found": true,
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
@@ -539,7 +955,7 @@
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 8,
         "papers": []
       },
       "pubmed": {
@@ -554,12 +970,6 @@
         "success": true,
         "patent_count": 0,
         "patents": []
-      },
-      "state_bar": {
-        "success": true,
-        "found": true,
-        "status": "Active",
-        "score_impact": -1
       }
     }
   },
@@ -567,17 +977,58 @@
     "name": "Michael Chen, Esq.",
     "specialty": "CERCLA/Remediation",
     "industry": "Environmental Law",
-    "score": 1,
-    "risk_level": "LOW",
+    "score": 34,
+    "risk_level": "CRITICAL",
+    "summary": "4 Retracted Papers",
+    "flags": [
+      "4 Retracted Papers"
+    ],
+    "dossier": {
+      "retractions": {
+        "count": 4,
+        "reason": "Duplicate publication",
+        "year": 2005
+      },
+      "license": {
+        "status": "Active",
+        "board": "State Bar"
+      },
+      "academic": {
+        "h_index": 23,
+        "citations": 713,
+        "source": "Google Scholar"
+      },
+      "funding": null,
+      "litigation": {
+        "appearances": 2,
+        "categories": [
+          "Chemical Exposure",
+          "Water Contamination"
+        ],
+        "label": "Case Appearances",
+        "source": "PACER"
+      },
+      "patents": null,
+      "publications": {
+        "count": 56,
+        "source": "CrossRef"
+      }
+    },
+    "original_sources": [
+      "RetractionWatch",
+      "PACER",
+      "CrossRef"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": true,
+        "count": 4
       },
       "orcid": {
         "success": true,
         "found": false,
-        "score_impact": 1
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
@@ -587,7 +1038,7 @@
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 56,
         "papers": []
       },
       "pubmed": {
@@ -602,12 +1053,6 @@
         "success": true,
         "patent_count": 0,
         "patents": []
-      },
-      "state_bar": {
-        "success": true,
-        "found": true,
-        "status": "Active",
-        "score_impact": -1
       }
     }
   },
@@ -615,17 +1060,51 @@
     "name": "Lisa Rodriguez, Esq.",
     "specialty": "Environmental Compliance",
     "industry": "Environmental Law",
-    "score": 1,
-    "risk_level": "LOW",
+    "score": 26,
+    "risk_level": "CRITICAL",
+    "summary": "2 Retracted Papers • License Revoked",
+    "flags": [
+      "2 Retracted Papers",
+      "License Revoked"
+    ],
+    "dossier": {
+      "retractions": {
+        "count": 2,
+        "reason": "Plagiarism",
+        "year": 2013
+      },
+      "license": {
+        "status": "Revoked",
+        "board": "State Bar"
+      },
+      "academic": {
+        "h_index": 8,
+        "citations": 216,
+        "source": "Google Scholar"
+      },
+      "funding": null,
+      "litigation": null,
+      "patents": null,
+      "publications": {
+        "count": 9,
+        "source": "CrossRef"
+      }
+    },
+    "original_sources": [
+      "RetractionWatch",
+      "State Bar",
+      "CrossRef"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": true,
+        "count": 2
       },
       "orcid": {
         "success": true,
         "found": false,
-        "score_impact": 1
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
@@ -635,7 +1114,7 @@
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 9,
         "papers": []
       },
       "pubmed": {
@@ -650,12 +1129,6 @@
         "success": true,
         "patent_count": 0,
         "patents": []
-      },
-      "state_bar": {
-        "success": true,
-        "found": true,
-        "status": "Active",
-        "score_impact": -1
       }
     }
   },
@@ -663,17 +1136,42 @@
     "name": "James Morrison, Esq.",
     "specialty": "Toxic Tort/Environmental",
     "industry": "Environmental Law",
-    "score": 1,
+    "score": 0,
     "risk_level": "LOW",
+    "summary": "No adverse findings on file",
+    "flags": [],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Active",
+        "board": "State Bar"
+      },
+      "academic": {
+        "h_index": 11,
+        "citations": 88,
+        "source": "Google Scholar"
+      },
+      "funding": null,
+      "litigation": null,
+      "patents": null,
+      "publications": {
+        "count": 32,
+        "source": "CrossRef"
+      }
+    },
+    "original_sources": [
+      "CrossRef"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
-        "found": false,
-        "score_impact": 1
+        "found": true,
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
@@ -683,7 +1181,7 @@
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 32,
         "papers": []
       },
       "pubmed": {
@@ -698,12 +1196,6 @@
         "success": true,
         "patent_count": 0,
         "patents": []
-      },
-      "state_bar": {
-        "success": true,
-        "found": true,
-        "status": "Active",
-        "score_impact": -1
       }
     }
   },
@@ -711,17 +1203,42 @@
     "name": "Rachel Green, Esq.",
     "specialty": "Environmental Policy",
     "industry": "Environmental Law",
-    "score": 1,
+    "score": 0,
     "risk_level": "LOW",
+    "summary": "No adverse findings on file",
+    "flags": [],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Active",
+        "board": "State Bar"
+      },
+      "academic": {
+        "h_index": 10,
+        "citations": 160,
+        "source": "Google Scholar"
+      },
+      "funding": null,
+      "litigation": null,
+      "patents": null,
+      "publications": {
+        "count": 6,
+        "source": "CrossRef"
+      }
+    },
+    "original_sources": [
+      "CrossRef"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
         "found": false,
-        "score_impact": 1
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
@@ -731,7 +1248,7 @@
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 6,
         "papers": []
       },
       "pubmed": {
@@ -746,12 +1263,6 @@
         "success": true,
         "patent_count": 0,
         "patents": []
-      },
-      "state_bar": {
-        "success": true,
-        "found": true,
-        "status": "Active",
-        "score_impact": -1
       }
     }
   },
@@ -759,17 +1270,58 @@
     "name": "Kevin Zhang, Esq.",
     "specialty": "Air Quality Law",
     "industry": "Environmental Law",
-    "score": 1,
-    "risk_level": "LOW",
+    "score": 28,
+    "risk_level": "CRITICAL",
+    "summary": "3 Retracted Papers",
+    "flags": [
+      "3 Retracted Papers"
+    ],
+    "dossier": {
+      "retractions": {
+        "count": 3,
+        "reason": "Statistical error",
+        "year": 2015
+      },
+      "license": {
+        "status": "Active",
+        "board": "State Bar"
+      },
+      "academic": {
+        "h_index": 10,
+        "citations": 80,
+        "source": "Google Scholar"
+      },
+      "funding": null,
+      "litigation": {
+        "appearances": 4,
+        "categories": [
+          "Air Quality",
+          "Chemical Exposure"
+        ],
+        "label": "Case Appearances",
+        "source": "PACER"
+      },
+      "patents": null,
+      "publications": {
+        "count": 44,
+        "source": "CrossRef"
+      }
+    },
+    "original_sources": [
+      "RetractionWatch",
+      "PACER",
+      "CrossRef"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": true,
+        "count": 3
       },
       "orcid": {
         "success": true,
-        "found": false,
-        "score_impact": 1
+        "found": true,
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
@@ -779,7 +1331,7 @@
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 44,
         "papers": []
       },
       "pubmed": {
@@ -794,12 +1346,6 @@
         "success": true,
         "patent_count": 0,
         "patents": []
-      },
-      "state_bar": {
-        "success": true,
-        "found": true,
-        "status": "Active",
-        "score_impact": -1
       }
     }
   },
@@ -807,17 +1353,42 @@
     "name": "John Smith, CPA, CFE",
     "specialty": "Forensic Accounting",
     "industry": "Financial",
-    "score": 1,
+    "score": 0,
     "risk_level": "LOW",
+    "summary": "No adverse findings on file",
+    "flags": [],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Active",
+        "board": "FINRA / SEC"
+      },
+      "academic": {
+        "h_index": 32,
+        "citations": 384,
+        "source": "Google Scholar"
+      },
+      "funding": null,
+      "litigation": null,
+      "patents": null,
+      "publications": {
+        "count": 26,
+        "source": "CrossRef"
+      }
+    },
+    "original_sources": [
+      "CrossRef"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
-        "found": false,
-        "score_impact": 1
+        "found": true,
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
@@ -827,7 +1398,7 @@
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 26,
         "papers": []
       },
       "pubmed": {
@@ -849,17 +1420,42 @@
     "name": "Maria Garcia, CPA, CVA",
     "specialty": "Valuation",
     "industry": "Financial",
-    "score": 1,
+    "score": 0,
     "risk_level": "LOW",
+    "summary": "No adverse findings on file",
+    "flags": [],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Active",
+        "board": "FINRA / SEC"
+      },
+      "academic": {
+        "h_index": 36,
+        "citations": 1080,
+        "source": "Google Scholar"
+      },
+      "funding": null,
+      "litigation": null,
+      "patents": null,
+      "publications": {
+        "count": 13,
+        "source": "CrossRef"
+      }
+    },
+    "original_sources": [
+      "CrossRef"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
         "found": false,
-        "score_impact": 1
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
@@ -869,7 +1465,7 @@
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 13,
         "papers": []
       },
       "pubmed": {
@@ -891,17 +1487,42 @@
     "name": "Robert Johnson, CPA",
     "specialty": "Fraud Detection",
     "industry": "Financial",
-    "score": 1,
+    "score": 0,
     "risk_level": "LOW",
+    "summary": "No adverse findings on file",
+    "flags": [],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Active",
+        "board": "FINRA / SEC"
+      },
+      "academic": {
+        "h_index": 28,
+        "citations": 420,
+        "source": "Google Scholar"
+      },
+      "funding": null,
+      "litigation": null,
+      "patents": null,
+      "publications": {
+        "count": 6,
+        "source": "CrossRef"
+      }
+    },
+    "original_sources": [
+      "CrossRef"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
-        "found": false,
-        "score_impact": 1
+        "found": true,
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
@@ -911,7 +1532,7 @@
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 6,
         "papers": []
       },
       "pubmed": {
@@ -933,17 +1554,49 @@
     "name": "Lisa Chen, CPA, CFE",
     "specialty": "Damages Calculation",
     "industry": "Financial",
-    "score": 1,
-    "risk_level": "LOW",
+    "score": 8,
+    "risk_level": "HIGH",
+    "summary": "1 Retracted Paper",
+    "flags": [
+      "1 Retracted Paper"
+    ],
+    "dossier": {
+      "retractions": {
+        "count": 1,
+        "reason": "Plagiarism",
+        "year": 2020
+      },
+      "license": {
+        "status": "Active",
+        "board": "FINRA / SEC"
+      },
+      "academic": {
+        "h_index": 24,
+        "citations": 288,
+        "source": "Google Scholar"
+      },
+      "funding": null,
+      "litigation": null,
+      "patents": null,
+      "publications": {
+        "count": 54,
+        "source": "CrossRef"
+      }
+    },
+    "original_sources": [
+      "RetractionWatch",
+      "CrossRef"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": true,
+        "count": 1
       },
       "orcid": {
         "success": true,
         "found": false,
-        "score_impact": 1
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
@@ -953,7 +1606,7 @@
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 54,
         "papers": []
       },
       "pubmed": {
@@ -975,17 +1628,42 @@
     "name": "Michael Torres, MBA, CFA",
     "specialty": "Financial Analysis",
     "industry": "Financial",
-    "score": 1,
+    "score": 0,
     "risk_level": "LOW",
+    "summary": "No adverse findings on file",
+    "flags": [],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Active",
+        "board": "FINRA / SEC"
+      },
+      "academic": {
+        "h_index": 31,
+        "citations": 837,
+        "source": "Google Scholar"
+      },
+      "funding": null,
+      "litigation": null,
+      "patents": null,
+      "publications": {
+        "count": 60,
+        "source": "CrossRef"
+      }
+    },
+    "original_sources": [
+      "CrossRef"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
-        "found": false,
-        "score_impact": 1
+        "found": true,
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
@@ -995,7 +1673,7 @@
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 60,
         "papers": []
       },
       "pubmed": {
@@ -1017,17 +1695,42 @@
     "name": "Diana Rodriguez, CPA",
     "specialty": "Expert Witness",
     "industry": "Financial",
-    "score": 1,
+    "score": 0,
     "risk_level": "LOW",
+    "summary": "No adverse findings on file",
+    "flags": [],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Active",
+        "board": "FINRA / SEC"
+      },
+      "academic": {
+        "h_index": 16,
+        "citations": 176,
+        "source": "Google Scholar"
+      },
+      "funding": null,
+      "litigation": null,
+      "patents": null,
+      "publications": {
+        "count": 40,
+        "source": "CrossRef"
+      }
+    },
+    "original_sources": [
+      "CrossRef"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
-        "found": false,
-        "score_impact": 1
+        "found": true,
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
@@ -1037,7 +1740,7 @@
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 40,
         "papers": []
       },
       "pubmed": {
@@ -1059,17 +1762,55 @@
     "name": "Dr. Alan Park, PE",
     "specialty": "Civil Engineering",
     "industry": "Engineering",
-    "score": 1,
+    "score": 2,
     "risk_level": "LOW",
+    "summary": "No adverse findings on file",
+    "flags": [],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Active",
+        "board": "State PE Board"
+      },
+      "academic": {
+        "h_index": 14,
+        "citations": 364,
+        "source": "Google Scholar"
+      },
+      "funding": null,
+      "litigation": {
+        "appearances": 2,
+        "categories": [
+          "Product Liability",
+          "Construction Defect"
+        ],
+        "label": "Litigation Appearances",
+        "source": "PACER"
+      },
+      "patents": {
+        "count": 2,
+        "source": "USPTO"
+      },
+      "publications": {
+        "count": 63,
+        "source": "CrossRef"
+      }
+    },
+    "original_sources": [
+      "PACER",
+      "USPTO",
+      "CrossRef"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
-        "found": false,
-        "score_impact": 1
+        "found": true,
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
@@ -1079,7 +1820,7 @@
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 63,
         "papers": []
       },
       "pubmed": {
@@ -1092,7 +1833,7 @@
       },
       "uspto_patents": {
         "success": true,
-        "patent_count": 0,
+        "patent_count": 2,
         "patents": []
       }
     }
@@ -1101,17 +1842,42 @@
     "name": "Dr. Michelle White, PE",
     "specialty": "Structural Engineering",
     "industry": "Engineering",
-    "score": 1,
+    "score": 0,
     "risk_level": "LOW",
+    "summary": "No adverse findings on file",
+    "flags": [],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Active",
+        "board": "State PE Board"
+      },
+      "academic": {
+        "h_index": 2,
+        "citations": 44,
+        "source": "Google Scholar"
+      },
+      "funding": null,
+      "litigation": null,
+      "patents": null,
+      "publications": {
+        "count": 6,
+        "source": "CrossRef"
+      }
+    },
+    "original_sources": [
+      "CrossRef"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
-        "found": false,
-        "score_impact": 1
+        "found": true,
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
@@ -1121,7 +1887,7 @@
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 6,
         "papers": []
       },
       "pubmed": {
@@ -1143,17 +1909,53 @@
     "name": "Dr. James Wilson, PE",
     "specialty": "Mechanical Engineering",
     "industry": "Engineering",
-    "score": 1,
-    "risk_level": "LOW",
+    "score": 8,
+    "risk_level": "HIGH",
+    "summary": "1 Retracted Paper",
+    "flags": [
+      "1 Retracted Paper"
+    ],
+    "dossier": {
+      "retractions": {
+        "count": 1,
+        "reason": "Duplicate publication",
+        "year": 2022
+      },
+      "license": {
+        "status": "Active",
+        "board": "State PE Board"
+      },
+      "academic": {
+        "h_index": 25,
+        "citations": 625,
+        "source": "Google Scholar"
+      },
+      "funding": null,
+      "litigation": null,
+      "patents": {
+        "count": 1,
+        "source": "USPTO"
+      },
+      "publications": {
+        "count": 54,
+        "source": "CrossRef"
+      }
+    },
+    "original_sources": [
+      "RetractionWatch",
+      "USPTO",
+      "CrossRef"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": true,
+        "count": 1
       },
       "orcid": {
         "success": true,
-        "found": false,
-        "score_impact": 1
+        "found": true,
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
@@ -1163,7 +1965,7 @@
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 54,
         "papers": []
       },
       "pubmed": {
@@ -1176,7 +1978,7 @@
       },
       "uspto_patents": {
         "success": true,
-        "patent_count": 0,
+        "patent_count": 1,
         "patents": []
       }
     }
@@ -1185,17 +1987,46 @@
     "name": "Dr. Sofia Martinez, PE",
     "specialty": "Environmental Engineering",
     "industry": "Engineering",
-    "score": 1,
+    "score": 0,
     "risk_level": "LOW",
+    "summary": "No adverse findings on file",
+    "flags": [],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Active",
+        "board": "State PE Board"
+      },
+      "academic": {
+        "h_index": 8,
+        "citations": 136,
+        "source": "Google Scholar"
+      },
+      "funding": null,
+      "litigation": null,
+      "patents": {
+        "count": 4,
+        "source": "USPTO"
+      },
+      "publications": {
+        "count": 50,
+        "source": "CrossRef"
+      }
+    },
+    "original_sources": [
+      "USPTO",
+      "CrossRef"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
         "found": false,
-        "score_impact": 1
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
@@ -1205,7 +2036,7 @@
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 50,
         "papers": []
       },
       "pubmed": {
@@ -1218,7 +2049,7 @@
       },
       "uspto_patents": {
         "success": true,
-        "patent_count": 0,
+        "patent_count": 4,
         "patents": []
       }
     }
@@ -1229,15 +2060,53 @@
     "industry": "Engineering",
     "score": 1,
     "risk_level": "LOW",
+    "summary": "No adverse findings on file",
+    "flags": [],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Active",
+        "board": "State PE Board"
+      },
+      "academic": {
+        "h_index": 21,
+        "citations": 315,
+        "source": "Google Scholar"
+      },
+      "funding": null,
+      "litigation": {
+        "appearances": 1,
+        "categories": [
+          "Product Liability",
+          "Structural Failure"
+        ],
+        "label": "Litigation Appearances",
+        "source": "PACER"
+      },
+      "patents": {
+        "count": 2,
+        "source": "USPTO"
+      },
+      "publications": {
+        "count": 26,
+        "source": "CrossRef"
+      }
+    },
+    "original_sources": [
+      "PACER",
+      "USPTO",
+      "CrossRef"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
-        "found": false,
-        "score_impact": 1
+        "found": true,
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
@@ -1247,7 +2116,7 @@
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 26,
         "papers": []
       },
       "pubmed": {
@@ -1260,7 +2129,7 @@
       },
       "uspto_patents": {
         "success": true,
-        "patent_count": 0,
+        "patent_count": 2,
         "patents": []
       }
     }
@@ -1269,17 +2138,45 @@
     "name": "Dr. Karen Davis, PE",
     "specialty": "Construction Defects",
     "industry": "Engineering",
-    "score": 1,
-    "risk_level": "LOW",
+    "score": 5,
+    "risk_level": "MEDIUM",
+    "summary": "License Suspended",
+    "flags": [
+      "License Suspended"
+    ],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Suspended",
+        "board": "State PE Board"
+      },
+      "academic": {
+        "h_index": 20,
+        "citations": 500,
+        "source": "Google Scholar"
+      },
+      "funding": null,
+      "litigation": null,
+      "patents": null,
+      "publications": {
+        "count": 16,
+        "source": "CrossRef"
+      }
+    },
+    "original_sources": [
+      "State PE Board",
+      "CrossRef"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
         "found": false,
-        "score_impact": 1
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
@@ -1289,7 +2186,7 @@
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 16,
         "papers": []
       },
       "pubmed": {
@@ -1311,17 +2208,62 @@
     "name": "Dr. Thomas Anderson",
     "specialty": "Toxicology",
     "industry": "Scientific",
-    "score": 1,
-    "risk_level": "LOW",
+    "score": 28,
+    "risk_level": "CRITICAL",
+    "summary": "3 Retracted Papers",
+    "flags": [
+      "3 Retracted Papers"
+    ],
+    "dossier": {
+      "retractions": {
+        "count": 3,
+        "reason": "Data fabrication",
+        "year": 2021
+      },
+      "license": {
+        "status": "Active",
+        "board": "Research Integrity Office"
+      },
+      "academic": {
+        "h_index": 5,
+        "citations": 60,
+        "source": "Google Scholar"
+      },
+      "funding": null,
+      "litigation": {
+        "appearances": 4,
+        "categories": [
+          "Environmental Health",
+          "Toxicology Disputes"
+        ],
+        "label": "Case Appearances",
+        "source": "PACER"
+      },
+      "patents": {
+        "count": 6,
+        "source": "USPTO"
+      },
+      "publications": {
+        "count": 19,
+        "source": "PubMed"
+      }
+    },
+    "original_sources": [
+      "RetractionWatch",
+      "PACER",
+      "USPTO",
+      "PubMed"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": true,
+        "count": 3
       },
       "orcid": {
         "success": true,
         "found": false,
-        "score_impact": 1
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
@@ -1331,12 +2273,12 @@
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 7,
         "papers": []
       },
       "pubmed": {
         "success": true,
-        "pubmed_count": 0
+        "pubmed_count": 19
       },
       "arxiv": {
         "success": true,
@@ -1344,7 +2286,7 @@
       },
       "uspto_patents": {
         "success": true,
-        "patent_count": 0,
+        "patent_count": 6,
         "patents": []
       }
     }
@@ -1353,36 +2295,85 @@
     "name": "Dr. Emily Johnson",
     "specialty": "Epidemiology",
     "industry": "Scientific",
-    "score": 1,
-    "risk_level": "LOW",
+    "score": 34,
+    "risk_level": "CRITICAL",
+    "summary": "3 Retracted Papers • License Suspended",
+    "flags": [
+      "3 Retracted Papers",
+      "License Suspended",
+      "$33K NIH Funding"
+    ],
+    "dossier": {
+      "retractions": {
+        "count": 3,
+        "reason": "Unreliable results",
+        "year": 2004
+      },
+      "license": {
+        "status": "Suspended",
+        "board": "Research Integrity Office"
+      },
+      "academic": {
+        "h_index": 37,
+        "citations": 333,
+        "source": "Google Scholar"
+      },
+      "funding": {
+        "amount": 33000,
+        "grants": 1,
+        "source": "NIH Reporter"
+      },
+      "litigation": {
+        "appearances": 3,
+        "categories": [
+          "Toxicology Disputes",
+          "Forensic Analysis"
+        ],
+        "label": "Case Appearances",
+        "source": "PACER"
+      },
+      "patents": null,
+      "publications": {
+        "count": 39,
+        "source": "PubMed"
+      }
+    },
+    "original_sources": [
+      "RetractionWatch",
+      "Research Integrity Office",
+      "NIH Reporter",
+      "PACER",
+      "PubMed"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": true,
+        "count": 3
       },
       "orcid": {
         "success": true,
-        "found": false,
-        "score_impact": 1
+        "found": true,
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
-        "count": 0,
-        "total_funding": 0,
+        "count": 1,
+        "total_funding": 33000,
         "score_impact": 0
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 15,
         "papers": []
       },
       "pubmed": {
         "success": true,
-        "pubmed_count": 0
+        "pubmed_count": 39
       },
       "arxiv": {
         "success": true,
-        "preprint_count": 0
+        "preprint_count": 4
       },
       "uspto_patents": {
         "success": true,
@@ -1395,40 +2386,74 @@
     "name": "Dr. Christopher Blake",
     "specialty": "Environmental Science",
     "industry": "Scientific",
-    "score": 1,
+    "score": 0,
     "risk_level": "LOW",
+    "summary": "No adverse findings on file",
+    "flags": [],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Active",
+        "board": "Research Integrity Office"
+      },
+      "academic": {
+        "h_index": 5,
+        "citations": 140,
+        "source": "Google Scholar"
+      },
+      "funding": {
+        "amount": 267000,
+        "grants": 3,
+        "source": "NIH Reporter"
+      },
+      "litigation": null,
+      "patents": {
+        "count": 4,
+        "source": "USPTO"
+      },
+      "publications": {
+        "count": 50,
+        "source": "PubMed"
+      }
+    },
+    "original_sources": [
+      "NIH Reporter",
+      "USPTO",
+      "PubMed"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
         "found": false,
-        "score_impact": 1
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
-        "count": 0,
-        "total_funding": 0,
+        "count": 3,
+        "total_funding": 267000,
         "score_impact": 0
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 20,
         "papers": []
       },
       "pubmed": {
         "success": true,
-        "pubmed_count": 0
+        "pubmed_count": 50
       },
       "arxiv": {
         "success": true,
-        "preprint_count": 0
+        "preprint_count": 1
       },
       "uspto_patents": {
         "success": true,
-        "patent_count": 0,
+        "patent_count": 4,
         "patents": []
       }
     }
@@ -1437,17 +2462,42 @@
     "name": "Dr. Lisa Wong",
     "specialty": "Chemistry",
     "industry": "Scientific",
-    "score": 1,
+    "score": 0,
     "risk_level": "LOW",
+    "summary": "No adverse findings on file",
+    "flags": [],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Active",
+        "board": "Research Integrity Office"
+      },
+      "academic": {
+        "h_index": 20,
+        "citations": 240,
+        "source": "Google Scholar"
+      },
+      "funding": null,
+      "litigation": null,
+      "patents": null,
+      "publications": {
+        "count": 63,
+        "source": "PubMed"
+      }
+    },
+    "original_sources": [
+      "PubMed"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
         "found": false,
-        "score_impact": 1
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
@@ -1457,16 +2507,16 @@
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 25,
         "papers": []
       },
       "pubmed": {
         "success": true,
-        "pubmed_count": 0
+        "pubmed_count": 63
       },
       "arxiv": {
         "success": true,
-        "preprint_count": 0
+        "preprint_count": 5
       },
       "uspto_patents": {
         "success": true,
@@ -1479,36 +2529,70 @@
     "name": "Dr. David Meyer",
     "specialty": "Biology",
     "industry": "Scientific",
-    "score": 1,
-    "risk_level": "LOW",
+    "score": 12,
+    "risk_level": "HIGH",
+    "summary": "License Revoked • $272K NIH Funding",
+    "flags": [
+      "License Revoked",
+      "$272K NIH Funding"
+    ],
+    "dossier": {
+      "retractions": null,
+      "license": {
+        "status": "Revoked",
+        "board": "Research Integrity Office"
+      },
+      "academic": {
+        "h_index": 4,
+        "citations": 44,
+        "source": "Google Scholar"
+      },
+      "funding": {
+        "amount": 272000,
+        "grants": 2,
+        "source": "NIH Reporter"
+      },
+      "litigation": null,
+      "patents": null,
+      "publications": {
+        "count": 36,
+        "source": "PubMed"
+      }
+    },
+    "original_sources": [
+      "Research Integrity Office",
+      "NIH Reporter",
+      "PubMed"
+    ],
     "data": {
       "retractionwatch": {
-        "success": false,
-        "error": "No response"
+        "success": true,
+        "found": false,
+        "count": 0
       },
       "orcid": {
         "success": true,
-        "found": false,
-        "score_impact": 1
+        "found": true,
+        "score_impact": 0
       },
       "nih_reporter": {
         "success": true,
-        "count": 0,
-        "total_funding": 0,
+        "count": 2,
+        "total_funding": 272000,
         "score_impact": 0
       },
       "crossref": {
         "success": true,
-        "publications": 0,
+        "publications": 14,
         "papers": []
       },
       "pubmed": {
         "success": true,
-        "pubmed_count": 0
+        "pubmed_count": 36
       },
       "arxiv": {
         "success": true,
-        "preprint_count": 0
+        "preprint_count": 1
       },
       "uspto_patents": {
         "success": true,

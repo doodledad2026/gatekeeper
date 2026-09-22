@@ -8,7 +8,8 @@ export type Expert = {
   industry: string;
   score: number;
   risk_level: "LOW" | "MEDIUM" | "HIGH" | "CRITICAL";
-  data: Record<string, { success?: boolean }>;
+  summary: string;
+  flags: string[];
 };
 
 export const allExperts = experts as Expert[];

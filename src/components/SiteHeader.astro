@@ -4,16 +4,17 @@ import IconMenu from "./icons/IconMenu.astro";
 import IconClose from "./icons/IconClose.astro";
 
 const links = [
-  { href: "#index", label: "Index" },
-  { href: "#coverage", label: "Coverage" },
-  { href: "#sources", label: "Sources" },
-  { href: "#directory", label: "Directory" },
-  { href: "#deploy", label: "Deploy" },
+  { href: "/#index", label: "Index" },
+  { href: "/#coverage", label: "Coverage" },
+  { href: "/#sources", label: "Sources" },
+  { href: "/#directory", label: "Directory" },
+  { href: "/#deploy", label: "Deploy" },
+  { href: "/guide/what-is-gatekeeper/", label: "Guide" },
 ];
 ---
 <header class="sticky top-0 z-50 border-b border-line bg-paper">
   <div class="container-edge flex h-16 items-center justify-between">
-    <a href="#top" class="flex items-center gap-2.5">
+    <a href="/" class="flex items-center gap-2.5">
       <Logo class="size-7 text-ink" />
       <span class="font-display text-base font-bold tracking-tight uppercase">Gatekeeper</span>
     </a>
@@ -29,7 +30,7 @@ const links = [
         </a>
       ))}
       <a
-        href="#directory"
+        href="/#directory"
         class="ml-2 border border-ink bg-ink px-4 py-2 font-mono text-xs tracking-wider text-paper uppercase transition-colors hover:bg-signal hover:border-signal"
       >
         Search
@@ -97,7 +98,11 @@ const links = [
   const sections = Array.from(document.querySelectorAll("[data-nav-link]"))
     .map((a) => a.getAttribute("href"))
     .filter((href, index, arr) => href && arr.indexOf(href) === index)
-    .map((href) => document.querySelector(href as string))
+    .map((href) => {
+      const hashIndex = href!.indexOf("#");
+      if (hashIndex === -1) return null;
+      return document.querySelector(href!.slice(hashIndex));
+    })
     .filter((el): el is HTMLElement => !!el);
 
   const navLinks = document.querySelectorAll("[data-nav-link]");
@@ -108,7 +113,8 @@ const links = [
         if (entry.isIntersecting) {
           const id = `#${entry.target.id}`;
           navLinks.forEach((link) => {
-            link.setAttribute("data-active", String(link.getAttribute("href") === id));
+            const href = link.getAttribute("href") ?? "";
+            link.setAttribute("data-active", String(href.endsWith(id)));
           });
         }
       });

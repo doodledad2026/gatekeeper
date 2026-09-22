@@ -1,0 +1,180 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import { guideNav, isGuideGroup } from "../data/guide";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+const currentPath = Astro.url.pathname;
+
+function isActive(href: string) {
+  return currentPath === href || currentPath === href.replace(/\/$/, "");
+}
+---
+<BaseLayout title={`${title} — Gatekeeper`} description={description}>
+  <SiteHeader />
+  <div class="container-edge grid grid-cols-1 gap-10 py-12 md:grid-cols-12 md:gap-8 md:py-16">
+    <aside class="md:col-span-3">
+      <nav class="sticky top-24 space-y-1 md:top-24" aria-label="Guide">
+        {guideNav.map((item) =>
+          isGuideGroup(item) ? (
+            <details open class="group border-t border-line pt-3 first:border-t-0 first:pt-0">
+              <summary class="flex cursor-pointer list-none items-center justify-between py-1.5 font-mono text-xs tracking-widest text-ink-soft uppercase [&::-webkit-details-marker]:hidden">
+                {item.label}
+                <span class="text-[10px] transition-transform group-open:rotate-180">▾</span>
+              </summary>
+              <ul class="mt-1 space-y-1 border-l border-line pl-4">
+                {item.children.map((link) => (
+                  <li>
+                    <a
+                      href={link.href}
+                      class:list={[
+                        "block py-1.5 text-sm transition-colors",
+                        isActive(link.href) ? "text-signal font-semibold" : "text-ink-soft hover:text-ink",
+                      ]}
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          ) : (
+            <a
+              href={item.href}
+              class:list={[
+                "block border-t border-line py-3 font-mono text-xs tracking-widest uppercase transition-colors first:border-t-0",
+                isActive(item.href) ? "text-signal" : "text-ink-soft hover:text-ink",
+              ]}
+            >
+              {item.label}
+            </a>
+          )
+        )}
+      </nav>
+    </aside>
+
+    <article class="md:col-span-8 md:col-start-5 max-w-2xl">
+      <p class="mb-3 font-mono text-xs tracking-widest text-signal uppercase">[ Guide ]</p>
+      <h1 class="font-display text-3xl font-bold tracking-tight sm:text-4xl">{title}</h1>
+      <div class="prose-guide mt-8">
+        <slot />
+      </div>
+    </article>
+  </div>
+  <SiteFooter />
+</BaseLayout>
+
+<style>
+  .prose-guide :global(p) {
+    margin-bottom: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-ink-soft);
+  }
+  .prose-guide :global(h2) {
+    margin-top: 2.5rem;
+    margin-bottom: 0.9rem;
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--color-ink);
+  }
+  .prose-guide :global(h3) {
+    margin-top: 1.75rem;
+    margin-bottom: 0.6rem;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-ink);
+  }
+  .prose-guide :global(ul),
+  .prose-guide :global(ol) {
+    margin: 0 0 1.1rem 1.25rem;
+    color: var(--color-ink-soft);
+    line-height: 1.7;
+  }
+  .prose-guide :global(li) {
+    margin-bottom: 0.4rem;
+  }
+  .prose-guide :global(ul) {
+    list-style: none;
+    margin-left: 0;
+  }
+  .prose-guide :global(ul li) {
+    position: relative;
+    padding-left: 1.1rem;
+  }
+  .prose-guide :global(ul li::before) {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--color-signal);
+  }
+  .prose-guide :global(strong) {
+    color: var(--color-ink);
+    font-weight: 600;
+  }
+  .prose-guide :global(a) {
+    color: var(--color-signal);
+    text-underline-offset: 3px;
+    text-decoration: underline;
+  }
+  .prose-guide :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+  }
+  .prose-guide :global(th) {
+    border-bottom: 1px solid var(--color-line);
+    text-align: left;
+    padding: 0.6rem 0.8rem 0.6rem 0;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-ink-soft);
+  }
+  .prose-guide :global(td) {
+    border-bottom: 1px solid var(--color-line);
+    padding: 0.7rem 0.8rem 0.7rem 0;
+    color: var(--color-ink-soft);
+    vertical-align: top;
+  }
+  .prose-guide :global(td:first-child),
+  .prose-guide :global(th:first-child) {
+    color: var(--color-ink);
+    font-weight: 600;
+  }
+  .prose-guide :global(details) {
+    border-bottom: 1px solid var(--color-line);
+    padding: 1rem 0;
+  }
+  .prose-guide :global(summary) {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-ink);
+    list-style: none;
+  }
+  .prose-guide :global(summary::-webkit-details-marker) {
+    display: none;
+  }
+  .prose-guide :global(summary::after) {
+    content: "+";
+    float: right;
+    color: var(--color-signal);
+    font-family: var(--font-mono);
+  }
+  .prose-guide :global(details[open] summary::after) {
+    content: "−";
+  }
+  .prose-guide :global(details p) {
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+  }
+</style>
